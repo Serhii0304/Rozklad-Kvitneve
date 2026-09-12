@@ -1,0 +1,277 @@
+{
+  "grade": 8,
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-57184402-0901-43fa-b0d5-1811cd69ffac.png",
+  "promptPath": "assets/print-generation/class-8-prompt.txt",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 35,
+  "dayHeadersChecked": [
+    "Понеділок",
+    "Вівторок",
+    "Середа",
+    "Четвер",
+    "П’ятниця"
+  ],
+  "titleTexts": [
+    "КВІТНЕВИЙ ЛІЦЕЙ",
+    "РОЗКЛАД УРОКІВ",
+    "8 КЛАС",
+    "І семестр · 2026–2027 навчальний рік"
+  ],
+  "cellByCellReview": [
+    {
+      "lesson": 1,
+      "time": "08:50–09:35",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Інформатика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Математика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Фізична культура",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Фізична культура",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Біологія",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 2,
+      "time": "09:50–10:35",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Українська мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Українська мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Біологія",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Інформатика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Українська мова",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 3,
+      "time": "10:50–11:35",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Історія України",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Фізична культура",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Хімія",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Англійська мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Всесвітня історія",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 4,
+      "time": "11:55–12:40",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Англійська мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Німецька мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Математика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Українська мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Англійська мова",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 5,
+      "time": "12:50–13:35",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Українська література",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Математика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Математика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Німецька мова",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Географія",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 6,
+      "time": "13:45–14:30",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Математика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "Мистецтво",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Фізика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Географія",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Зарубіжна література",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    },
+    {
+      "lesson": 7,
+      "time": "14:40–15:25",
+      "visuallyRead": true,
+      "cells": [
+        {
+          "day": "Понеділок",
+          "observedText": "Хімія",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Вівторок",
+          "observedText": "—",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Середа",
+          "observedText": "Громадянська освіта",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "Четвер",
+          "observedText": "Фізика",
+          "matchesPromptAndConfig": true
+        },
+        {
+          "day": "П’ятниця",
+          "observedText": "Технології",
+          "matchesPromptAndConfig": true
+        }
+      ]
+    }
+  ],
+  "groupsChecked": "No subgroup-qualified entries are present in this class's source.",
+  "emptyCellsChecked": [
+    "Вівторок, lesson 7: em dash only"
+  ],
+  "edits": [
+    {
+      "method": "builtin-imagegen-targeted-edit",
+      "sourceGeneratedPath": "C:/Users/serge/.codex/generated_images/01a09665-4722-78a2-825f-b867d8f43654/exec-30f2055d-915d-4fb7-9c42-f36805ef82c0.png",
+      "prompt": "Use case: precise-object-edit. Edit target: the supplied finished timetable image for class 8. Remove ONLY all extraneous decorative lettering OUTSIDE the timetable and outside the four required centered title lines. Remove the words on the stack of four books at top left; remove handwritten slogan at top right; remove bottom center slogan; remove words on the books at bottom right. Replace removed lettering with seamless existing background/material texture and ornamental marks only, without words. Keep all illustrations, colors, layout, borders, all grid cells, every subject, every lesson number/time and all weekday headings unchanged. Keep the four centered titles absolutely unchanged: КВІТНЕВИЙ ЛІЦЕЙ; РОЗКЛАД УРОКІВ; 8 КЛАС; І семестр · 2026–2027 навчальний рік. All 35 cells are already correct: DO NOT ALTER ANY GRID CONTENT. Preserve same entire page and composition. Do not crop or add any text.",
+      "purpose": "Remove unwanted decorative slogans outside timetable; all grid content preserved and visually rechecked."
+    },
+    {
+      "method": "builtin-imagegen-targeted-edit",
+      "sourceGeneratedPath": "C:/Users/serge/.codex/generated_images/01a09665-4722-78a2-825f-b867d8f43654/exec-27c8192f-31b5-4c1b-9e7a-b9684eb085e6.png",
+      "prompt": "Use case: precise-object-edit. Edit target: the supplied whole finished class 8 Ukrainian timetable. Make only ONE small local icon correction: in the Tuesday / Вівторок, lesson 6, time 13:45–14:30 cell, replace ONLY the painted artist palette/brush illustration next to the word «Мистецтво» with an elegant little pair of theatre comedy/tragedy masks plus a musical note, in the same hand-painted navy, gold, ivory aesthetic and the same footprint. Keep the exact label «Мистецтво» unchanged. The new icon must distinctly signify theatre and musical arts, never a painter palette. Every other pixel/content must be preserved as closely as possible: all 35 subject cells in their same coordinates, all subject spellings, seven lesson numbers and times, day headers, four centered title lines, every other icon, background, margins and entire landscape page composition. Do not reflow, crop, add text, create slogans or labels, or redraw the layout. Change only this single palette icon. Keep current native resolution.\n",
+      "promptPath": "E:\\Мої файли\\Робочий стіл 12.09.2026\\Школи 2026-2027\\Квітневий ліцей\\.schedule-work\\full-image-prompts\\class-8-arts-edit.txt",
+      "purpose": "Replace only the Мистецтво palette with theatre masks and a music symbol, distinguishing it from Образотворче мистецтво. Entire final image reread; all 35 cells and times unchanged."
+    }
+  ],
+  "remainingIssues": [],
+  "accepted": true,
+  "verification": "Read entire final original-resolution image using view_image, checked each cell/row/time/title/day heading against class prompt and schedule-config.js. PNG copied without processing; no code/SVG/text overlays or upscaling.",
+  "sourceGeneratedSha256": "66A3C625EE2733AFFA3B2DD5A8AD9DC1D31D1F50DC878926DDE79B73B630756E",
+  "artsIconChecked": true,
+  "reviewAfterLatestEdit": "Full original-resolution image reread using view_image. All 35 subject cells, seven times, six column headings, four centered title lines, empty-cell state and new theatre/music icon checked. No outstanding issues.",
+  "imageSha256": "66a3c625ee2733affa3b2dd5a8ad9dc1d31d1f50dc878926dde79b73b630756e"
+}

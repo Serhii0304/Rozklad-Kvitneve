@@ -1,0 +1,20 @@
+{
+  "grade": 5,
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-0af770e7-5f09-442f-aefd-0ba32ec6105b.png",
+  "promptPath": "assets/print-generation/class-5-prompt.txt",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 35,
+  "remainingIssues": [],
+  "accepted": true,
+  "notes": [
+    "All35 subject cells read visually against source. Row7 has five empty cells; row6 Tuesday and Thursday are also blank. Informatics subgroup1 Tuesday5 and subgroup2 Friday6 preserved.",
+    "Exact titles and all seven bell ranges verified.",
+    "A targeted ImageGen edit removed unsolicited peripheral quotations and changed Arts icon to theatre masks; no programmatic text overlay or retouching."
+  ],
+  "imageSha256": "a73bd625b709917de5ffcb06d6493354e8fda2274e8db9224bf59b10fbc0724e"
+}

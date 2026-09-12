@@ -27,7 +27,7 @@ test('Class printing uses one full-resolution poster while ordinary day printing
  const html=printPagesMarkup([{title:'6 клас',poster}]);
  assert.equal(html,posterPrintMarkup(poster));
  assert.equal((html.match(/<img /g)||[]).length,1);
- assert.ok(html.includes('width="3508" height="2480"'));
+  assert.doesNotMatch(html,/3508|2480/);
  assert.ok(html.includes('class-6-week.png'));
  assert.ok(!html.includes('<table'));
  const day=printPagesMarkup([{title:'Понеділок',content:'<table><tr><td>Математика</td></tr></table>'}]);

@@ -10,5 +10,5 @@ export function posterForClass(config,grade){
 }
 
 export function posterPrintMarkup(poster){
-  return '<section class="print-page poster-print-page"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'" alt="'+escapeHtml(poster.label)+' — тижневий розклад уроків Квітневого ліцею, І семестр 2026–2027" width="3508" height="2480"></div></section>';
+  return '<section class="print-page poster-print-page"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'" alt="'+escapeHtml(poster.label)+' — тижневий розклад уроків Квітневого ліцею, І семестр 2026–2027"></div></section>';
 }

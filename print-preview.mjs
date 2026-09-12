@@ -21,7 +21,7 @@ $('#poster-preview').alt=poster.label+' — повний тижневий роз
 $('#poster-preview').src=poster.previewPath;
 const original=$('#poster-original');
 original.alt=$('#poster-preview').alt;
-original.addEventListener('load',()=>{ $('#print-poster').disabled=false;$('#poster-status').textContent='Зображення готове до друку'; });
+original.addEventListener('load',()=>{ $('#print-poster').disabled=false;$('#poster-status').textContent='Зображення готове до друку';$('#poster-resolution').textContent=original.naturalWidth+' × '+original.naturalHeight+' px'; });
 original.addEventListener('error',()=>{ $('#poster-status').textContent='Не вдалося завантажити зображення. Оновіть сторінку.'; });
 original.src=poster.imagePath;
 $('#print-poster').addEventListener('click',()=>window.print());

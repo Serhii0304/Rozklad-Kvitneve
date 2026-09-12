@@ -1,0 +1,311 @@
+{
+  "grade": 6,
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-e5f584d4-158d-4f0e-b4d1-d81978ad4964.png",
+  "promptPath": "assets/print-generation/class-6-prompt.txt",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 35,
+  "remainingIssues": [],
+  "accepted": true,
+  "cells": [
+    {
+      "lesson": 1,
+      "day": "Понеділок",
+      "expected": "Українська мова / Англійська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 1,
+      "day": "Вівторок",
+      "expected": "Німецька мова / Українська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 1,
+      "day": "Середа",
+      "expected": "Математика",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 1,
+      "day": "Четвер",
+      "expected": "Німецька мова / Українська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 1,
+      "day": "П’ятниця",
+      "expected": "Українська мова / Англійська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 2,
+      "day": "Понеділок",
+      "expected": "Математика",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 2,
+      "day": "Вівторок",
+      "expected": "Математика",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 2,
+      "day": "Середа",
+      "expected": "Українська мова / Англійська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 2,
+      "day": "Четвер",
+      "expected": "Українська мова / Німецька мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 2,
+      "day": "П’ятниця",
+      "expected": "Фізична культура",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 3,
+      "day": "Понеділок",
+      "expected": "Англійська мова / Українська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 3,
+      "day": "Вівторок",
+      "expected": "Українська мова / Німецька мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 3,
+      "day": "Середа",
+      "expected": "Англійська мова / Українська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 3,
+      "day": "Четвер",
+      "expected": "Українська література",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 3,
+      "day": "П’ятниця",
+      "expected": "Англійська мова / Українська мова",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 4,
+      "day": "Понеділок",
+      "expected": "Зарубіжна література",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 4,
+      "day": "Вівторок",
+      "expected": "Історія",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 4,
+      "day": "Середа",
+      "expected": "Історія",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 4,
+      "day": "Четвер",
+      "expected": "Фізична культура",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 4,
+      "day": "П’ятниця",
+      "expected": "Інформатика / Технології (2 підгрупа)",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 5,
+      "day": "Понеділок",
+      "expected": "Пізнаємо природу",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 5,
+      "day": "Вівторок",
+      "expected": "Здоров’я, безпека та добробут",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 5,
+      "day": "Середа",
+      "expected": "Фізична культура",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 5,
+      "day": "Четвер",
+      "expected": "Англійська мова (2 підгрупа) / Інформатика",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 5,
+      "day": "П’ятниця",
+      "expected": "Образотворче мистецтво",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 6,
+      "day": "Понеділок",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 6,
+      "day": "Вівторок",
+      "expected": "Математика",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 6,
+      "day": "Середа",
+      "expected": "Англійська мова (1 підгрупа) / Технології (1 підгрупа)",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 6,
+      "day": "Четвер",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 6,
+      "day": "П’ятниця",
+      "expected": "Географія",
+      "renderedBlankAsEmDash": false,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 7,
+      "day": "Понеділок",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 7,
+      "day": "Вівторок",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 7,
+      "day": "Середа",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 7,
+      "day": "Четвер",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    },
+    {
+      "lesson": 7,
+      "day": "П’ятниця",
+      "expected": "",
+      "renderedBlankAsEmDash": true,
+      "readable": true,
+      "matches": true
+    }
+  ],
+  "reviewMethod": "Viewed complete final native image with view_image original detail, manually read all 35 cells row by row, and compared to full prompt and schedule-config.js. Checked all seven lesson times, six headers, four centered title lines and blank-cell em dashes.",
+  "edits": [
+    {
+      "method": "builtin-imagegen-targeted-edit",
+      "description": "Removed decorative slogans and book-spine labels; timetable content preserved",
+      "sourcePath": "C:\\Users\\serge\\.codex\\generated_images\\01a09664-fc00-7ca1-b4fc-a6c108d8fe90\\exec-fffb22f1-4393-4818-a0fa-73b1df9325f7.png"
+    }
+  ],
+  "artifactModification": "Byte-for-byte copy of accepted generated PNG; no code, text overlay, compositing or upscaling",
+  "sha256": "EA1940F30C18860C3BEA8B1940CEBA8AA1820DED3F863AAD2B30978E388F65C5",
+  "notes": [
+    "Native output is 1492 x 1054, below requested 3508 x 2480 target.",
+    "Slash-separated subjects render on separate lines within same cell as required."
+  ],
+  "imageSha256": "ea1940f30c18860c3bea8b1940ceba8aa1820ded3f863aad2b30978e388f65c5"
+}
