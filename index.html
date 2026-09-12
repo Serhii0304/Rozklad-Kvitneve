@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#254bd7">
+<meta name="description" content="Розклад уроків 5–11 класів Квітневого ліцею на І семестр 2026–2027 навчального року. Дзвінки, поточний урок і київський час.">
+<title>Квітневе · Розклад 2026–2027</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="theme-init.js"></script>
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="enhancements.css">
+<link rel="stylesheet" href="highlights.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="ukraine.css">
+<link rel="stylesheet" href="print.css">
+<link rel="stylesheet" href="kvitneve.css">
+<script src="schedule-config.js"></script>
+<script type="module" src="app.mjs"></script>
+</head>
+<body>
+<a class="skip" href="#schedule">Перейти до розкладу</a>
+<header class="header"><div class="header-inner">
+<a class="brand" data-home href="index.html" aria-label="Квітневе — головна"><span class="brand-mark" aria-hidden="true">К<span>·</span></span><span>Квітневий ліцей<small>Розклад уроків і дзвінків</small></span></a>
+<nav class="top-nav" aria-label="Головна навігація"><a href="index.html" data-nav="schedule">Розклад уроків</a><a href="Розклад дзвінків.html" data-nav="bells" class="bells-nav" aria-label="Розклад дзвінків"><span class="nav-icon" aria-hidden="true"><img src="assets/ui/school-bell-refined.png" alt="" width="32" height="32" draggable="false"></span><span>Розклад дзвінків</span></a></nav>
+<span class="school-year">2026–2027</span>
+<div class="theme-switch" role="group" aria-label="Тема оформлення"><button class="theme-button" data-set-theme="light" aria-pressed="true" aria-label="Світла тема" title="Світла тема" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5" stroke-linecap="round"/></svg><span>Світла</span></button><button class="theme-button" data-set-theme="dark" aria-pressed="false" aria-label="Темна тема" title="Темна тема" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.7 8.7 0 1 0 20.5 14.2Z" stroke-linejoin="round"/></svg><span>Темна</span></button></div>
+</div></header>
+<main class="shell">
+<section class="intro" aria-labelledby="page-title">
+<div><div class="eyebrow"><span class="small-square"></span> І СЕМЕСТР · 2026–2027 НАВЧАЛЬНИЙ РІК</div><div class="intro-title-row"><h1 id="page-title">Розклад уроків<br><span>5–11 класи</span></h1><a class="school-home" data-home href="index.html" aria-label="Повернутися на головну" title="На головну"><img src="assets/ui/school-building.png" alt="" width="96" height="96" draggable="false"></a></div><p id="page-description">Квітневий ліцей</p><a href="index.html" id="class-back" data-home hidden class="button">← Повернутися на головну</a></div>
+<aside class="clock-card" aria-label="Київський час">
+<div class="clock-top"><span class="live-dot"></span> КИЇВСЬКИЙ ЧАС <span class="timezone">Europe/Kyiv</span></div>
+<time id="clock" class="clock-time">--:--<span>:--</span></time>
+<div class="clock-bottom"><span id="date">Завантаження дати…</span><span id="sync-status">Час пристрою</span></div>
+</aside><img class="ukraine-emblem" src="assets/ui/ukraine-coat-of-arms.svg" alt="Малий Державний Герб України" width="330" height="461"></section>
+<section class="live-panel" aria-label="Поточний стан навчального дня">
+<div class="live-label"><span class="live-dot"></span><span id="live-kind">ЗАРАЗ У ШКОЛІ</span></div>
+<div class="live-summary"><h2 id="live-title">Розклад на сьогодні</h2><p id="live-detail">Час уроків за Києвом</p></div>
+<div class="countdown"><span id="countdown-label">До наступного дзвінка</span><strong id="countdown">--:--</strong></div>
+<div class="live-progress"><span id="live-progress"></span></div>
+</section>
+<section id="silence" class="silence-strip" aria-label="Хвилина мовчання">
+<div class="remembrance" aria-hidden="true">09:00</div><div class="silence-copy"><strong id="silence-title">Хвилина мовчання</strong><p id="silence-detail">Щодня о 09:00–09:01. Вшановуємо пам’ять загиблих.</p></div>
+<button id="sound-button" hidden type="button" class="button sound-button" aria-pressed="false">Увімкнути звук</button>
+<span id="silence-countdown" class="silence-countdown" hidden></span>
+</section>
+<p id="audio-help" class="audio-help">Звук активується після звичайного дотику до сайту. Тримайте сторінку відкритою, а пристрій — активним.</p>
+<section id="schedule" class="schedule-section">
+<div class="section-heading"><div><div class="eyebrow">5–11 КЛАСИ</div><h2 id="schedule-title">Загальний розклад уроків</h2></div><button id="print-button" class="button" type="button"><span aria-hidden="true">↗</span> Друк / PDF</button></div>
+<div class="toolbar">
+<div id="class-tabs" class="class-tabs" role="group" aria-label="Оберіть клас"><button type="button" data-class="all" aria-label="Усі класи" aria-pressed="true"><span class="class-card-top"><span class="class-card-number" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="17" y="3" width="8" height="8" rx="2"/><rect x="3" y="17" width="8" height="8" rx="2"/><rect x="17" y="17" width="8" height="8" rx="2"/></svg></span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">Усі класи</span></button><button type="button" data-class="5" aria-label="5 клас" aria-pressed="false"><span class="class-card-top"><span class="class-card-number" aria-hidden="true">5</span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">клас</span></button><button type="button" data-class="6" aria-label="6 клас" aria-pressed="false"><span class="class-card-top"><span class="class-card-number" aria-hidden="true">6</span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">клас</span></button><button type="button" data-class="7" aria-label="7 клас" aria-pressed="false"><span class="class-card-top"><span class="class-card-number" aria-hidden="true">7</span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">клас</span></button><button type="button" data-class="8" aria-label="8 клас" aria-pressed="false"><span class="class-card-top"><span class="class-card-number" aria-hidden="true">8</span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">клас</span></button><button type="button" data-class="9" aria-label="9 клас" aria-pressed="false"><span class="class-card-top"><span class="class-card-number" aria-hidden="true">9</span><span class="class-card-check" aria-hidden="true"></span></span><span class="class-card-label">клас</span></button></div>
+<label class="subject-filter"><span class="sr-only">Знайти предмет</span><select id="subject-filter"><option value="">Усі предмети</option></select></label>
+</div>
+<div class="day-toolbar"><div id="day-tabs" class="day-tabs" role="group" aria-label="Оберіть день"></div><div class="view-tabs" role="group" aria-label="Період розкладу"><button data-view="day" aria-pressed="true">День</button><button data-view="week" aria-pressed="false">Тиждень</button></div></div>
+<div class="table-caption"><span id="schedule-caption">Розклад на день</span><button type="button" id="today-button" class="text-button">До сьогодні ↗</button></div>
+<div id="schedule-content"></div>
+<details class="schedule-notes"><summary>Підгрупи та позначення в розкладі</summary><p>Позначення «1п», «2п» — підгрупи. Предмети через «/» показані разом, як у шкільному розкладі; кожен можна виділити окремо. Математику збережено під назвою з документа.</p><p>У 6 класі в середу на 6-му уроці в джерелі обидва предмети позначені «1п». Цей запис збережено до уточнення.</p></details>
+<p class="table-note"><span class="legend-dot"></span> <span id="table-legend">Синій рядок — урок, який триває зараз.</span> <span class="mobile-hint">Таблицю можна гортати вбік.</span><span id="filter-result" role="status"></span></p>
+</section>
+<section id="bells" class="bells-section" hidden>
+<div class="section-heading"><div><div class="eyebrow">РИТМ ШКІЛЬНОГО ДНЯ</div><h2>Розклад дзвінків</h2></div><div class="bells-heading-actions"><span class="pill">5–11 класи · 45 хвилин</span><button class="button" data-print-bells type="button">Друк / PDF</button></div></div>
+<div class="bells-layout"><div id="bells-content" class="bells-list"></div><aside class="bells-note"><span class="eyebrow">НА ЩОДЕНЬ</span><h3>Час для навчання.<br>Час для відпочинку.</h3><p>Перший урок починається о <strong>08:50</strong>. Після першого та другого уроків — перерви по <strong>15 хвилин</strong>, після третього — <strong>20 хвилин</strong>.</p><p>У будні дзвінок звучить на початку та в кінці кожного уроку за київським часом. Залишайте сайт відкритим і звук увімкненим.</p><div class="bells-fact"><span>Тривалість уроку</span><strong>45 хв</strong></div><div class="bells-fact"><span>Звичайна перерва</span><strong>10 хв</strong></div><div class="bells-fact"><span>Завершення 7-го уроку</span><strong>15:25</strong></div><a class="button primary" data-home href="index.html">Повернутися до уроків ↗</a></aside></div>
+</section>
+<footer><div><strong>Квітневий ліцей</strong><span>І семестр · 2026–2027 навчальний рік</span><span>Сайт розроблений Лукашенком Сергієм Олександровичем</span></div><a href="#top" id="back-top">Нагору ↑</a></footer>
+</main>
+<button id="floating-top" class="back-to-top" type="button" aria-label="Повернутися на початок сайту" title="На початок сайту" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 12 6-6 6 6M12 6v14"/></svg><span>Нагору</span></button>
+<div id="print-stage"></div>
+<noscript><div class="noscript">Для перегляду розкладу та роботи годинника увімкніть JavaScript у браузері.</div></noscript>
+</body></html>

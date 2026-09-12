@@ -1,0 +1,36 @@
+/* Kvitneve has seven classes and subgroup lessons. */
+.class-tabs,.is-class-page .class-tabs{grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;}
+.class-tabs button[data-class="10"]{--btn-color:#197d96;--btn-end:#16546e;--glow-color:#92dcf1;--glow-spread-color:#4ba7c555;}
+.class-tabs button[data-class="11"]{--btn-color:#646cb0;--btn-end:#384078;--glow-color:#b5bcff;--glow-spread-color:#848fec55;}
+.schedule-table thead th[data-grade-head="10"]{background:#19768c;color:white;}
+.schedule-table thead th[data-grade-head="11"]{background:#59669d;color:white;}
+.schedule-table td[data-grade="10"]{background:#e1f3f8;}
+.schedule-table td[data-grade="11"]{background:#e9ecf9;}
+[data-theme="dark"] .schedule-table td[data-grade="10"]{background:#16323d;}
+[data-theme="dark"] .schedule-table td[data-grade="11"]{background:#252d47;}
+.schedule-table:not(.single-class):not(.week-matrix){min-width:1100px;}
+.lesson-subjects{display:flex;flex-direction:column;align-items:stretch;gap:4px;}
+.subject-copy{display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;}
+.subject-name{overflow-wrap:anywhere;}
+.subgroup{font-size:11px;line-height:1.25;color:var(--muted);font-weight:700;}
+.subject-divider{text-align:center;font-size:12px;color:var(--muted);line-height:1;}
+.has-groups .subject-symbol{width:28px;height:28px;flex-basis:28px;}
+.has-groups .subject-icon{width:25px;height:25px;}
+.schedule-notes{font-size:13px;line-height:1.6;color:var(--muted);padding:16px 4px 0;}
+.schedule-notes summary{cursor:pointer;color:var(--ink);font-weight:700;}
+.schedule-notes p{max-width:960px;}
+@media screen and (min-width:1100px){.toolbar,.is-class-page .toolbar{grid-template-columns:1fr;}.subject-filter{justify-self:end;min-width:245px;}.class-tabs button[data-class]{padding:12px 8px;}}
+@media screen and (max-width:900px){.class-tabs,.is-class-page .class-tabs{grid-template-columns:repeat(4,minmax(0,1fr));}.subject-filter{width:100%;}.subject-filter select{width:100%;}}
+@media screen and (max-width:480px){.class-tabs,.is-class-page .class-tabs{gap:7px;}.class-tabs button[data-class]{min-height:57px;}.schedule-notes{font-size:12px;}}
+#print-stage .schedule-table td[data-grade="10"]{background:#e1f3f8;}
+#print-stage .schedule-table td[data-grade="11"]{background:#e9ecf9;}
+#print-stage .schedule-table thead th[data-grade-head="10"]{background:#19768c;}
+#print-stage .schedule-table thead th[data-grade-head="11"]{background:#59669d;}
+#print-stage .lesson-subjects{gap:0;}
+#print-stage .subject-copy{gap:0;}
+#print-stage .has-groups .subject{padding:.4mm;gap:.5mm;flex-direction:row;}
+#print-stage .has-groups .subject-name{font-size:8pt;}
+#print-stage .has-groups .subject-symbol{width:5mm;height:5mm;flex:0 0 5mm;}
+#print-stage .has-groups .subject-icon{width:4.5mm;height:4.5mm;}
+#print-stage .subgroup{font-size:7pt;color:#405774;}
+#print-stage .subject-divider{font-size:7pt;}
