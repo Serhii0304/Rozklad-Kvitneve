@@ -79,5 +79,3 @@ Precise edit prompt applied to the first generated image:
 ```text
 Use case: precise-object-edit. This is an edit of the attached landscape school timetable art background. Change ONLY the face of the small golden compass instrument in the lower-right corner. REMOVE every letter, number, Roman numeral, tiny inscription and tick mark on its dial. Keep its central indigo/gold compass rose geometric star and a completely BLANK warm ivory field around that star inside the circular golden rim. Keep the instrument outline, golden metal rim, books, leaves, distant buildings, all artwork, palette, composition, large blank white central area and original landscape aspect ratio exactly as they are. No added objects. No text or numerals anywhere. Preserve the original image resolution.
 ```
-
-
