@@ -9,8 +9,12 @@ export function pdfForPrintRequest(config,{section='schedule',grade='all',view='
 }
 
 export function openPrintPdf(path){
-  // Native PDF printing has no HTML URL/date/page-title headers or footers.
-  const opened=window.open(path,'_blank');
-  if(opened)opened.opener=null;
-  else window.location.assign(path);
+  // A same-origin download also works in embedded browsers without PDF popups.
+  // Printing the file never adds the HTML page's URL/date/title; audio stays open.
+  const link=document.createElement('a');
+  link.href=path;
+  link.download=path.split('/').at(-1);
+  document.body.append(link);
+  link.click();
+  link.remove();
 }

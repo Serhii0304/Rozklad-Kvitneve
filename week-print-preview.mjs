@@ -1,5 +1,5 @@
 import {wholeWeekPosters,weekPosterForDay,wholeWeekPdfPath} from './week-posters.mjs';
-import {openPrintPdf} from './print-files.mjs';
+import {openPrintPdf} from './print-files.mjs?v=20260912-pdf-download';
 const C=window.SchoolScheduleConfig;
 const pages=wholeWeekPosters(C);
 const selected=weekPosterForDay(C,new URLSearchParams(location.search).get('day'));

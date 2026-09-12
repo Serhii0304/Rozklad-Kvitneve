@@ -21,14 +21,12 @@ test('Bell and single-class day tables keep their ordinary print route',()=>{
  assert.equal(pdfForPrintRequest(C,{grade:'6',view:'day'}),null);
 });
 
-test('PDF opens in the current tab if an embedded browser blocks popups',()=>{
- const previous=globalThis.window,calls=[];
- try{globalThis.window={open:()=>null,location:{assign:path=>calls.push(path)}};openPrintPdf('assets/print-week/monday.pdf');assert.deepEqual(calls,['assets/print-week/monday.pdf']);}
- finally{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
-});
-
-test('An available PDF tab is isolated without interrupting the original page',()=>{
- const previous=globalThis.window,opened={opener:'parent'},calls=[];
- try{globalThis.window={open:()=>opened,location:{assign:path=>calls.push(path)}};openPrintPdf('assets/print/class-10-week.pdf');assert.equal(opened.opener,null);assert.deepEqual(calls,[]);}
- finally{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
+test('PDF is delivered through a download link without popups or leaving the sound-enabled page',()=>{
+ const previous=globalThis.document,calls=[];
+ const link={click(){calls.push({href:this.href,download:this.download});},remove(){calls.push('removed');}};
+ try{
+  globalThis.document={createElement:tag=>{assert.equal(tag,'a');return link;},body:{append:item=>assert.equal(item,link)}};
+  openPrintPdf('assets/print/class-10-week.pdf');
+  assert.deepEqual(calls,[{href:'assets/print/class-10-week.pdf',download:'class-10-week.pdf'},'removed']);
+ }finally{if(previous===undefined)delete globalThis.document;else globalThis.document=previous;}
 });

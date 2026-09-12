@@ -10,7 +10,7 @@ execFileSync(process.execPath,['scripts/validate-generated-posters.mjs'],{stdio:
 execFileSync(process.execPath,['scripts/validate-week-posters.mjs'],{stdio:'inherit'});
 execFileSync(process.execPath,['scripts/validate-print-pdfs.mjs'],{stdio:'inherit'});
 for(const name of files){if(!fs.existsSync(name))throw new Error('Missing '+name);if(/\.(mjs|js)$/.test(name))execFileSync(process.execPath,['--check',name]);}
-const html=fs.readFileSync('index.html','utf8');for(const [,ref]of html.matchAll(/(?:src|href)="([^"]+)"/g)){if(/^(?:https?:|#|\.\/)/.test(ref))continue;if(!fs.existsSync(ref))throw new Error('Broken reference '+ref);}
-for(const name of files.filter(x=>x.endsWith('.mjs'))){for(const [,ref]of fs.readFileSync(name,'utf8').matchAll(/from ['"](\.\/[^'"]+)['"]/g))if(!fs.existsSync(path.resolve(root,ref)))throw new Error('Missing import '+ref);}
+const html=fs.readFileSync('index.html','utf8');for(const [,ref]of html.matchAll(/(?:src|href)="([^"]+)"/g)){if(/^(?:https?:|#|\.\/)/.test(ref))continue;if(!fs.existsSync(ref.split(/[?#]/)[0]))throw new Error('Broken reference '+ref);}
+for(const name of files.filter(x=>x.endsWith('.mjs'))){for(const [,ref]of fs.readFileSync(name,'utf8').matchAll(/from ['"](\.\/[^'"]+)['"]/g))if(!fs.existsSync(path.resolve(root,ref.split(/[?#]/)[0])))throw new Error('Missing import '+ref);}
 fs.mkdirSync(out,{recursive:true});for(const name of files){fs.mkdirSync(path.dirname(path.join(out,name)),{recursive:true});fs.copyFileSync(path.join(root,name),path.join(out,name));}
 console.log('Static site built: '+files.length+' public files.');

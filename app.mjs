@@ -2,7 +2,7 @@ import {subjectCellMarkup,subjectsInLesson} from './lesson-content.mjs';
 import {enhanceTableNavigation} from './table-navigation.mjs';
 import {posterForClass} from './print-posters.mjs';
 import {weekPosterForDay,wholeWeekPosters} from './week-posters.mjs';
-import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs';
+import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs?v=20260912-pdf-download';
 import {readViewState,selectViewMode} from './view-mode.mjs';
 import {displaySchoolState} from './live-state.mjs';
 import {classIndex,classGrade,classRangeLabel} from './time-core.mjs';

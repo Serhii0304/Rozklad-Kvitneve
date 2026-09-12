@@ -1,5 +1,5 @@
 import {posterForClass} from './print-posters.mjs';
-import {openPrintPdf} from './print-files.mjs';
+import {openPrintPdf} from './print-files.mjs?v=20260912-pdf-download';
 const C=window.SchoolScheduleConfig;
 const $=selector=>document.querySelector(selector);
 const requested=new URLSearchParams(location.search).get('class');
