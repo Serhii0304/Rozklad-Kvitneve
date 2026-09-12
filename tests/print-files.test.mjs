@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import {pdfForPrintRequest} from '../print-files.mjs';
+import {pdfForPrintRequest,openPrintPdf} from '../print-files.mjs';
 const box={window:{}};vm.runInNewContext(fs.readFileSync(new URL('../schedule-config.js',import.meta.url),'utf8'),box);
 const C=box.window.SchoolScheduleConfig;
 
@@ -19,4 +19,16 @@ test('The homepage week and individual days resolve to the correct PDF pages',()
 test('Bell and single-class day tables keep their ordinary print route',()=>{
  assert.equal(pdfForPrintRequest(C,{section:'bells'}),null);
  assert.equal(pdfForPrintRequest(C,{grade:'6',view:'day'}),null);
+});
+
+test('PDF opens in the current tab if an embedded browser blocks popups',()=>{
+ const previous=globalThis.window,calls=[];
+ try{globalThis.window={open:()=>null,location:{assign:path=>calls.push(path)}};openPrintPdf('assets/print-week/monday.pdf');assert.deepEqual(calls,['assets/print-week/monday.pdf']);}
+ finally{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
+});
+
+test('An available PDF tab is isolated without interrupting the original page',()=>{
+ const previous=globalThis.window,opened={opener:'parent'},calls=[];
+ try{globalThis.window={open:()=>opened,location:{assign:path=>calls.push(path)}};openPrintPdf('assets/print/class-10-week.pdf');assert.equal(opened.opener,null);assert.deepEqual(calls,[]);}
+ finally{if(previous===undefined)delete globalThis.window;else globalThis.window=previous;}
 });

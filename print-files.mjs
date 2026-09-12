@@ -10,5 +10,7 @@ export function pdfForPrintRequest(config,{section='schedule',grade='all',view='
 
 export function openPrintPdf(path){
   // Native PDF printing has no HTML URL/date/page-title headers or footers.
-  window.open(path,'_blank','noopener');
+  const opened=window.open(path,'_blank');
+  if(opened)opened.opener=null;
+  else window.location.assign(path);
 }
