@@ -2,6 +2,8 @@
 #print-stage.print-measure{display:block!important;position:fixed!important;left:-10000px!important;top:0;visibility:hidden;width:276mm;pointer-events:none;}
 #print-stage .print-page{display:block;position:relative;width:276mm;height:189mm;margin:0;box-sizing:border-box;break-inside:avoid;page-break-inside:avoid;}
 #print-stage .print-sheet{width:276mm;zoom:var(--print-scale,1);margin-inline:auto;}
+#print-stage .poster-print-sheet{display:flex;align-items:center;justify-content:center;height:189mm;}
+#print-stage .class-print-poster{display:block;object-fit:contain;width:auto;height:189mm;max-width:276mm;}
 #print-stage .print-heading{display:flex;align-items:center;justify-content:space-between;gap:8mm;padding:0 0 3mm;margin:0 0 3mm;border-bottom:1.5mm solid #315daf;}
 #print-stage .print-heading img{display:block;object-fit:contain;width:22mm;height:22mm;}
 #print-stage .print-school{font-size:10pt;font-weight:700;margin:0 0 1mm;color:#405774;}

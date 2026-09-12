@@ -34,6 +34,8 @@
 #print-stage .has-groups .subject-icon{width:4.5mm;height:4.5mm;}
 #print-stage .subgroup{font-size:7pt;color:#405774;}
 #print-stage .subject-divider{font-size:7pt;}
+.print-heading-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;}
+.poster-link{font-size:13px;}
 
 /* A compact, readable table layout for seven classes. Printing has its own layout. */
 @media screen{
@@ -88,6 +90,12 @@
  #schedule-content .table-scroll-tools button{min-width:40px;min-height:36px;padding:3px 10px;border:1px solid var(--kv-stroke);border-radius:7px;background:var(--white);color:var(--ink);font-size:19px;line-height:1;}
  #schedule-content .table-scroll-tools button:disabled{opacity:.35;cursor:default;}
  #schedule-content .table-scroll-tools button:not(:disabled):hover{background:var(--soft);border-color:var(--blue);}
+}
+@media screen{
+ #schedule-content .week-heading,#schedule-content .week-block.is-today .week-heading{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;border-left:0;box-shadow:inset 4px 0 var(--day-ink);}
+ #schedule-content .week-block .week-title{grid-column:2;justify-self:center;display:flex;flex-direction:column;align-items:center;gap:3px;width:auto;text-align:center;}
+ #schedule-content .week-title span{position:static;transform:none;margin:0;}
+ #schedule-content .week-actions{grid-column:3;justify-self:end;}
 }
 @media screen and (min-width:1380px){
  .toolbar,.is-class-page .toolbar{grid-template-columns:minmax(0,1fr) 220px;padding:10px;gap:14px;}

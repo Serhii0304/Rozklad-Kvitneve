@@ -1,5 +1,6 @@
 import {subjectCellMarkup,subjectsInLesson} from './lesson-content.mjs';
 import {enhanceTableNavigation} from './table-navigation.mjs';
+import {posterForClass} from './print-posters.mjs';
 import {classIndex,classGrade,classRangeLabel} from './time-core.mjs';
 import {printPagesMarkup,fitPrintPages,settlePrintAssets} from './print-layout.mjs';
 import {subjectIconMarkup} from './subject-icons.mjs';
@@ -42,7 +43,7 @@ $('#schedule-content').innerHTML=view==='day'?table(day):grade!=='all'?weekMatri
 $('#print-button').innerHTML='<span aria-hidden="true">↗</span> '+(view==='week'?'Друк тижня':'Друк / PDF');
 $('#subject-filter').value=subject;
 applyPageLayout();applyFilters();updateLive(true);syncUrl();renderSection();enhanceTableNavigation($('#schedule-content'));}
-function applyPageLayout(){const isClass=grade!=='all'&&section==='schedule';document.body.classList.toggle('is-class-page',isClass);document.body.classList.toggle('is-bells-page',section==='bells');$('#page-title').innerHTML=isClass?'Розклад уроків <span>'+grade+' клас</span>':section==='bells'?'Розклад <span>дзвінків</span>':'Розклад уроків<br><span>5–11 класи</span>';$('#page-description').textContent=C.school.name;$('#class-back').hidden=!isClass;$('#schedule-title').textContent=isClass?(view==='week'?'Навчальний тиждень · '+grade+' клас':'Розклад дня · '+grade+' клас'):'Загальний розклад уроків';$('#day-tabs').hidden=isClass&&view==='week';$('#table-legend').textContent=isClass&&view==='week'?'Синій рядок — поточний урок; найяскравіша клітинка — сьогодні. Натисніть на предмет, щоб виділити його за тиждень.':'Синій рядок — урок, який триває зараз.';}
+function applyPageLayout(){const isClass=grade!=='all'&&section==='schedule';const poster=posterForClass(C,grade);$('#poster-link').href=poster?.pagePath||'print.html';$('#poster-link').textContent=isClass?'Зображення для друку':'Розклади для друку';document.body.classList.toggle('is-class-page',isClass);document.body.classList.toggle('is-bells-page',section==='bells');$('#page-title').innerHTML=isClass?'Розклад уроків <span>'+grade+' клас</span>':section==='bells'?'Розклад <span>дзвінків</span>':'Розклад уроків<br><span>5–11 класи</span>';$('#page-description').textContent=C.school.name;$('#class-back').hidden=!isClass;$('#schedule-title').textContent=isClass?(view==='week'?'Навчальний тиждень · '+grade+' клас':'Розклад дня · '+grade+' клас'):'Загальний розклад уроків';$('#day-tabs').hidden=isClass&&view==='week';$('#table-legend').textContent=isClass&&view==='week'?'Синій рядок — поточний урок; найяскравіша клітинка — сьогодні. Натисніть на предмет, щоб виділити його за тиждень.':'Синій рядок — урок, який триває зараз.';}
 function navigatePage(nextGrade='all',nextSection='schedule'){grade=nextGrade;section=nextSection;view='week';subject='';dayFilters={};const filename=section==='bells'?'Розклад дзвінків.html':grade==='all'?'index.html':'class.html';const url=new URL(filename,location.href);if(grade!=='all')url.searchParams.set('class',grade+' клас');url.searchParams.set('view','week');url.hash=section;history.pushState(null,'',url);render();window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
 function syncUrl(){const query=new URLSearchParams();if(grade!=='all')query.set('class',grade+' клас');if(view==='week')query.set('view','week');if(!autoDay)query.set('day',D[day].id);const str=query.toString();history.replaceState(null,'',location.pathname+(str?'?'+str:'')+'#'+section);document.title=(section==='bells'?'Дзвінки':grade==='all'?'Розклад 5–11 класів':grade+' клас — розклад')+' · Квітневе 2026–2027';}
 function renderSection(){section=location.hash==='#bells'||decodeURIComponent(location.pathname).endsWith('Розклад дзвінків.html')?'bells':'schedule';applyPageLayout();$('#schedule').hidden=section!=='schedule';$('#bells').hidden=section!=='bells';$$('[data-nav]').forEach(a=>{if(a.dataset.nav===section)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});syncUrl();}
@@ -63,7 +64,7 @@ function printView(printDay=null){
  const stage=$('#print-stage'),pages=[];
  if(section==='bells'&&printDay===null)pages.push({title:'Розклад дзвінків · 5–11 класи',bells:true,content:$('#bells-content').outerHTML});
  else if(printDay!==null)pages.push({title:D[printDay].label+' · 5–11 класи',content:table(printDay,true)});
- else if(view==='week'&&grade!=='all')pages.push({title:grade+' клас · Навчальний тиждень',content:weekMatrix()});
+ else if(view==='week'&&grade!=='all')pages.push({title:grade+' клас · Навчальний тиждень',poster:posterForClass(C,grade)});
  else if(view==='week')D.forEach((d,i)=>pages.push({title:d.label+' · 5–11 класи',content:table(i,true)}));
  else pages.push({title:D[day].label+' · '+(grade==='all'?'5–11 класи':grade+' клас'),content:table(day)});
  stage.innerHTML=printPagesMarkup(pages);

@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "generate:posters": "node scripts/generate-print-posters.mjs",
+    "validate:posters": "node scripts/validate-print-posters.mjs"
+  },
+  "devDependencies": {
+    "sharp": "0.35.4"
   }
 }

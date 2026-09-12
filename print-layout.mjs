@@ -1,6 +1,7 @@
+import {posterPrintMarkup} from './print-posters.mjs';
 export function printPagesMarkup(pages){
  const esc=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- return pages.map((page,i)=>'<section class="print-page"><div class="print-sheet"><header class="print-heading"><div><p class="print-school">Квітневий ліцей</p><h1>'+esc(page.title)+'</h1><p class="print-term">І семестр · 2026–2027 навчальний рік</p></div><img src="assets/ui/'+(page.bells?'school-bell-refined.png':'school-building.png')+'" alt="" width="90" height="90"></header>'+page.content+'<div class="print-footer"><span>Квітневе · Розклад уроків і дзвінків</span><span>'+String(i+1)+' / '+String(pages.length)+'</span></div></div></section>').join('');
+ return pages.map((page,i)=>page.poster?posterPrintMarkup(page.poster):'<section class="print-page"><div class="print-sheet"><header class="print-heading"><div><p class="print-school">Квітневий ліцей</p><h1>'+esc(page.title)+'</h1><p class="print-term">І семестр · 2026–2027 навчальний рік</p></div><img src="assets/ui/'+(page.bells?'school-bell-refined.png':'school-building.png')+'" alt="" width="90" height="90"></header>'+page.content+'<div class="print-footer"><span>Квітневе · Розклад уроків і дзвінків</span><span>'+String(i+1)+' / '+String(pages.length)+'</span></div></div></section>').join('');
 }
 export function fitPrintPages(stage){
  stage.classList.add('print-measure');
