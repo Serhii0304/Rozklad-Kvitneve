@@ -1,0 +1,26 @@
+{
+  "dayId": "monday",
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-a9ee0a9d-d981-40ab-8e02-15853beb3777.png",
+  "promptPath": "assets/print-week-generation/monday-prompt.txt",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 49,
+  "remainingIssues": [],
+  "accepted": true,
+  "styleMatched": true,
+  "gridFillsPage": true,
+  "notes": [
+    "Master style: compact centered heading, navy/ivory/gold, eight columns, seven rows, narrow decorative edge.",
+    "All49 subject cells visually read row by row; subgroup qualifiers Monday5 class11 preserved; blanks Monday6 class6 and Monday7 classes5,6,10 correct.",
+    "Native original is copied unchanged; no programmatic overlay or upscaling.",
+    "User explicitly selected this first reduced-icon version via attached image; rejected the later tiny-inline variant. All49 cell texts and seven bell ranges rechecked unchanged."
+  ],
+  "iconsApproved": true,
+  "iconSizing": "user-approved-medium-below-text",
+  "userSelectedStyle": true,
+  "imageSha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64"
+}

@@ -6,9 +6,10 @@ export function posterForClass(config,grade){
   if(index<0)return null;
   const id=classGrade(config,index);
   if(!/^(?:[5-9]|10|11)$/.test(id))return null;
-  return {grade:id,label:config.classes[index],imagePath:'assets/print/class-'+id+'-week.png',previewPath:'assets/print/class-'+id+'-preview.webp',pagePath:'print.html?class='+encodeURIComponent(id),downloadName:'Квітневий ліцей — '+config.classes[index]+' — розклад 2026-2027.png'};
+  return {grade:id,label:config.classes[index],imagePath:'assets/print/class-'+id+'-week.png',pdfPath:'assets/print/class-'+id+'-week.pdf',previewPath:'assets/print/class-'+id+'-preview.webp',pagePath:'print.html?class='+encodeURIComponent(id),downloadName:'Квітневий ліцей — '+config.classes[index]+' — розклад 2026-2027.png'};
 }
 
 export function posterPrintMarkup(poster){
-  return '<section class="print-page poster-print-page"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'" alt="'+escapeHtml(poster.label)+' — тижневий розклад уроків Квітневого ліцею, І семестр 2026–2027"></div></section>';
+  const alt=poster.kind==='school-week'?poster.label+' — загальний розклад 5–11 класів Квітневого ліцею, І семестр 2026–2027':poster.label+' — тижневий розклад уроків Квітневого ліцею, І семестр 2026–2027';
+  return '<section class="print-page poster-print-page'+(poster.kind==='school-week'?' general-week-print-page':'')+'"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'" alt="'+escapeHtml(alt)+'"></div></section>';
 }

@@ -7,6 +7,7 @@ export function fitPrintPages(stage){
  stage.classList.add('print-measure');
  stage.querySelectorAll('.print-page').forEach(page=>{
   const sheet=page.querySelector('.print-sheet');sheet.style.setProperty('--print-scale','1');
+  if(page.classList.contains('poster-print-page'))return;
   const scale=Math.min(1,(page.clientHeight-2)/Math.max(1,sheet.scrollHeight));
   sheet.style.setProperty('--print-scale',String(scale));
  });

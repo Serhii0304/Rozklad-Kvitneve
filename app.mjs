@@ -1,6 +1,8 @@
 import {subjectCellMarkup,subjectsInLesson} from './lesson-content.mjs';
 import {enhanceTableNavigation} from './table-navigation.mjs';
 import {posterForClass} from './print-posters.mjs';
+import {weekPosterForDay,wholeWeekPosters} from './week-posters.mjs';
+import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs';
 import {readViewState,selectViewMode} from './view-mode.mjs';
 import {displaySchoolState} from './live-state.mjs';
 import {classIndex,classGrade,classRangeLabel} from './time-core.mjs';
@@ -46,7 +48,7 @@ $('#schedule-content').innerHTML=view==='day'?dayBlock(day):grade!=='all'?weekMa
 $('#print-button').innerHTML='<span aria-hidden="true">↗</span> '+(view==='week'?'Друк тижня':'Друк / PDF');
 $('#subject-filter').value=subject;
 applyPageLayout();applyFilters();updateLive(true);syncUrl();renderSection();enhanceTableNavigation($('#schedule-content'));}
-function applyPageLayout(){const isClass=grade!=='all'&&section==='schedule';const poster=posterForClass(C,grade);$('#poster-link').href=poster?.pagePath||'print.html';$('#poster-link').textContent=isClass?'Зображення для друку':'Розклади для друку';document.body.classList.toggle('is-class-page',isClass);document.body.classList.toggle('is-bells-page',section==='bells');$('#page-title').innerHTML=isClass?'Розклад уроків <span>'+grade+' клас</span>':section==='bells'?'Розклад <span>дзвінків</span>':'Розклад уроків<br><span>5–11 класи</span>';$('#page-description').textContent=C.school.name;$('#class-back').hidden=!isClass;$('#schedule-title').textContent=isClass?(view==='week'?'Навчальний тиждень · '+grade+' клас':'Розклад дня · '+grade+' клас'):'Загальний розклад уроків';$('#day-tabs').hidden=isClass&&view==='week';$('#table-legend').textContent=isClass&&view==='week'?'Синій рядок — поточний урок; найяскравіша клітинка — сьогодні. Натисніть на предмет, щоб виділити його за тиждень.':'Синій рядок — урок, який триває зараз.';}
+function applyPageLayout(){const isClass=grade!=='all'&&section==='schedule';const poster=posterForClass(C,grade);$('#poster-link').href=poster?.pagePath||'week-print.html';$('#poster-link').textContent=isClass?'Зображення для друку':'Зображення тижня';document.body.classList.toggle('is-class-page',isClass);document.body.classList.toggle('is-bells-page',section==='bells');$('#page-title').innerHTML=isClass?'Розклад уроків <span>'+grade+' клас</span>':section==='bells'?'Розклад <span>дзвінків</span>':'Розклад уроків<br><span>5–11 класи</span>';$('#page-description').textContent=C.school.name;$('#class-back').hidden=!isClass;$('#schedule-title').textContent=isClass?(view==='week'?'Навчальний тиждень · '+grade+' клас':'Розклад дня · '+grade+' клас'):'Загальний розклад уроків';$('#day-tabs').hidden=isClass&&view==='week';$('#table-legend').textContent=isClass&&view==='week'?'Синій рядок — поточний урок; найяскравіша клітинка — сьогодні. Натисніть на предмет, щоб виділити його за тиждень.':'Синій рядок — урок, який триває зараз.';}
 function navigatePage(nextGrade='all',nextSection='schedule'){grade=nextGrade;section=nextSection;view='week';day=readViewState(new URLSearchParams(),clock.now(),C).day;autoDay=true;subject='';dayFilters={};const filename=section==='bells'?'Розклад дзвінків.html':grade==='all'?'index.html':'class.html';const url=new URL(filename,location.href);if(grade!=='all')url.searchParams.set('class',grade+' клас');url.searchParams.set('view','week');url.hash=section;history.pushState(null,'',url);render();if(section==='schedule'&&today>=0&&today<D.length)scrollToLiveLesson(true);else window.scrollTo({top:0,behavior:'instant'});}
 function syncUrl(){const query=new URLSearchParams();if(grade!=='all')query.set('class',grade+' клас');query.set('view',view);if(!autoDay)query.set('day',D[day].id);const str=query.toString();history.replaceState(null,'',location.pathname+(str?'?'+str:'')+'#'+section);document.title=(section==='bells'?'Дзвінки':grade==='all'?'Розклад 5–11 класів':grade+' клас — розклад')+' · Квітневе 2026–2027';}
 function renderSection(){section=location.hash==='#bells'||decodeURIComponent(location.pathname).endsWith('Розклад дзвінків.html')?'bells':'schedule';applyPageLayout();$('#schedule').hidden=section!=='schedule';$('#bells').hidden=section!=='bells';$$('[data-nav]').forEach(a=>{if(a.dataset.nav===section)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});syncUrl();}
@@ -68,9 +70,10 @@ if(section==='bells'){$$('[data-bell].is-current small').forEach(node=>node.text
 function printView(printDay=null){
  const stage=$('#print-stage'),pages=[];
  if(section==='bells'&&printDay===null)pages.push({title:'Розклад дзвінків · 5–11 класи',bells:true,content:$('#bells-content').outerHTML});
- else if(printDay!==null)pages.push({title:D[printDay].label+' · 5–11 класи',content:table(printDay,true)});
+ else if(printDay!==null)pages.push({title:D[printDay].label+' · 5–11 класи',poster:weekPosterForDay(C,printDay)});
  else if(view==='week'&&grade!=='all')pages.push({title:grade+' клас · Навчальний тиждень',poster:posterForClass(C,grade)});
- else if(view==='week')D.forEach((d,i)=>pages.push({title:d.label+' · 5–11 класи',content:table(i,true)}));
+ else if(view==='week')wholeWeekPosters(C).forEach(poster=>pages.push({title:poster.label+' · 5–11 класи',poster}));
+ else if(grade==='all')pages.push({title:D[day].label+' · 5–11 класи',poster:weekPosterForDay(C,day)});
  else pages.push({title:D[day].label+' · '+(grade==='all'?'5–11 класи':grade+' клас'),content:table(day)});
  stage.innerHTML=printPagesMarkup(pages);
  const state=displaySchoolState(clock.now(),C,section==='bells'?'all':grade);
@@ -94,7 +97,7 @@ function printView(printDay=null){
  });
  stage.dataset.ready='true';
 }
-async function printDocument(printDay=null){printView(printDay);await settlePrintAssets($('#print-stage'));fitPrintPages($('#print-stage'));window.print();}
+async function printDocument(printDay=null){const pdf=pdfForPrintRequest(C,{section,grade,view,day,printDay});if(pdf){openPrintPdf(pdf);return;}printView(printDay);await settlePrintAssets($('#print-stage'));fitPrintPages($('#print-stage'));window.print();}
 $('#print-button').addEventListener('click',()=>printDocument());
 window.addEventListener('beforeprint',()=>{if($('#print-stage').dataset.ready!=='true')printView();fitPrintPages($('#print-stage'));});
 window.addEventListener('afterprint',()=>{delete $('#print-stage').dataset.ready;$('#print-stage').innerHTML='';});

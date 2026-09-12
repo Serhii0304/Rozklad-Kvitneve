@@ -1,4 +1,5 @@
 import {posterForClass} from './print-posters.mjs';
+import {openPrintPdf} from './print-files.mjs';
 const C=window.SchoolScheduleConfig;
 const $=selector=>document.querySelector(selector);
 const requested=new URLSearchParams(location.search).get('class');
@@ -24,4 +25,4 @@ original.alt=$('#poster-preview').alt;
 original.addEventListener('load',()=>{ $('#print-poster').disabled=false;$('#poster-status').textContent='Зображення готове до друку';$('#poster-resolution').textContent=original.naturalWidth+' × '+original.naturalHeight+' px'; });
 original.addEventListener('error',()=>{ $('#poster-status').textContent='Не вдалося завантажити зображення. Оновіть сторінку.'; });
 original.src=poster.imagePath;
-$('#print-poster').addEventListener('click',()=>window.print());
+$('#print-poster').addEventListener('click',()=>openPrintPdf(poster.pdfPath));

@@ -1,0 +1,81 @@
+{
+  "dayId": "friday",
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-8688f753-aa8d-4428-97cc-2d533fa5f30e.png",
+  "promptPath": "assets/print-week-generation/friday-prompt.txt",
+  "exactGenerationPromptPath": "E:\\Мої файли\\Робочий стіл 12.09.2026\\Школи 2026-2027\\Квітневий ліцей\\.schedule-work\\general-week-prompts\\friday-generation-exact.txt",
+  "acceptedEditPromptPath": "E:\\Мої файли\\Робочий стіл 12.09.2026\\Школи 2026-2027\\Квітневий ліцей\\.schedule-work\\general-week-prompts\\friday-small-icons-edit.txt",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 49,
+  "remainingIssues": [],
+  "accepted": true,
+  "styleMatched": true,
+  "gridFillsPage": true,
+  "iconsApproved": true,
+  "iconSizing": "user-approved-medium-below-text",
+  "approvalReferencePath": "C:\\Users\\serge\\AppData\\Local\\Temp\\codex-clipboard-08b84bde-da3c-4219-bd31-1132f1f97615.png",
+  "originalBytesPreserved": true,
+  "reviewMethod": "Full native image visually read row-by-row against exact prompt and schedule-config.js. All 49 cells, headers, lesson numbers and times match. Original generated file copied byte-for-byte and SHA256 equality verified.",
+  "timesReviewed": [
+    "08:50–09:35",
+    "09:50–10:35",
+    "10:50–11:35",
+    "11:55–12:40",
+    "12:50–13:35",
+    "13:45–14:30",
+    "14:40–15:25"
+  ],
+  "rowsReviewed": [
+    {
+      "lesson": 1,
+      "visibleCellsMatch": true,
+      "exactRow": "1 · 08:50–09:35 | Українська мова | Українська мова / Англійська мова | Інформатика (1 підгрупа) | Біологія | Математика | Історія | Українська мова\r"
+    },
+    {
+      "lesson": 2,
+      "visibleCellsMatch": true,
+      "exactRow": "2 · 09:50–10:35 | Англійська мова | Фізична культура | Здоров’я, безпека та добробут | Українська мова | Правознавство | Географія | Математика\r"
+    },
+    {
+      "lesson": 3,
+      "visibleCellsMatch": true,
+      "exactRow": "3 · 10:50–11:35 | Зарубіжна література | Англійська мова / Українська мова | Технології | Всесвітня історія | Біологія | Математика | Українська література\r"
+    },
+    {
+      "lesson": 4,
+      "visibleCellsMatch": true,
+      "exactRow": "4 · 11:55–12:40 | Мистецтво | Інформатика / Технології (2 підгрупа) | Географія | Англійська мова | Фізика | Історія | Зарубіжна література\r"
+    },
+    {
+      "lesson": 5,
+      "visibleCellsMatch": true,
+      "exactRow": "5 · 12:50–13:35 | Історія | Образотворче мистецтво | Фізична культура | Географія | Англійська мова | Інформатика / Захист України | Фізика\r"
+    },
+    {
+      "lesson": 6,
+      "visibleCellsMatch": true,
+      "exactRow": "6 · 13:45–14:30 | Інформатика (2 підгрупа) | Географія | Українська література | Зарубіжна література | Технології | Англійська мова | Фізика (астрономія)\r"
+    },
+    {
+      "lesson": 7,
+      "visibleCellsMatch": true,
+      "exactRow": "7 · 14:40–15:25 | — | — | Інформатика (2 підгрупа) | Технології | Здоров’я, безпека та добробут | Фізика (астрономія) | —\r"
+    }
+  ],
+  "details": [
+    "Classes 5, 6, 7, 8, 9, 10, 11 are all present; 7 numbered rows.",
+    "6 class row1 Ukrainian/English and row3 English/Ukrainian remain in correct order; both icons present.",
+    "7 class row1 Informatics (1 subgroup); 5 class row6 and 7 class row7 Informatics (2 subgroup).",
+    "6 class row4 Informatics / Technologies (2 subgroup) retains qualifier only on Technologies.",
+    "10 class row5 Informatics / Defense has no invented group numbers.",
+    "Physics (astronomy) present at 11 class row6 and 10 class row7, telescope icons.",
+    "Three blanks at class5/6/11 row7 contain em dash only.",
+    "Art in class5 row4 uses masks/music; Fine art in class6 row5 uses palette/brush; icons medium below labels as user selected."
+  ],
+  "discardedExperiments": "Later tiny-inline edit outputs are not accepted, not copied to final staging, and superseded by the user's explicit medium-below-text selection.",
+  "imageSha256": "a7297a561318952cbda1d070e917eaa394bd85464a4f7d717baf8388aaf166a9"
+}

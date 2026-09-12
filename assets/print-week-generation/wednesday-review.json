@@ -1,0 +1,76 @@
+{
+  "dayId": "wednesday",
+  "method": "builtin-imagegen-full",
+  "sourceGeneratedPath": "exec-39036c63-848a-4568-8f5e-3a47aebea8dd.png",
+  "promptPath": "assets/print-week-generation/wednesday-prompt.txt",
+  "generationPromptPath": "E:/Мої файли/Робочий стіл 12.09.2026/Школи 2026-2027/Квітневий ліцей/.schedule-work/general-week-prompts/wednesday-initial-style-reference.txt",
+  "editPromptPaths": [
+    "E:/Мої файли/Робочий стіл 12.09.2026/Школи 2026-2027/Квітневий ліцей/.schedule-work/general-week-prompts/wednesday-edit-small-icons-1.txt"
+  ],
+  "nativeWidth": 1491,
+  "nativeHeight": 1055,
+  "titlesCentered": true,
+  "spellingChecked": true,
+  "timesChecked": true,
+  "cellsChecked": 49,
+  "remainingIssues": [],
+  "accepted": true,
+  "styleMatched": true,
+  "gridFillsPage": true,
+  "iconsApproved": true,
+  "iconSizing": "user-approved-medium-below-text",
+  "userSelectedStyle": true,
+  "notes": [
+    "Read all 49 cells row by row against exact Wednesday prompt. Grade 6 row 2 Ukrainian/English and row 3 English/Ukrainian preserve opposite subject order.",
+    "Grade 6 row 6 preserves English (1 підгрупа) / Technologies (1 підгрупа), including the intentionally identical subgroup numbers. Empty cells are exactly grades 5, 6 and 7 in row 7.",
+    "Ukrainian literature in grade 10 row 4 and grade 9 row 5 has brown quill/book, distinct from language notebook/blue pen. Civic education has people/dialogue and Art has masks/music.",
+    "All seven bell ranges verified as 08:50–09:35, 09:50–10:35, 10:50–11:35, 11:55–12:40, 12:50–13:35, 13:45–14:30, 14:40–15:25.",
+    "Compared against the user-selected Monday medium-icons-below-text attachment; same navy/ivory/gold, serif bold labels, compact centered titles, eight columns, seven rows, full-page table and fine outer border. User's selected medium icon style supersedes earlier tiny-icon targets.",
+    "Final is an unchanged copy of selected raw built-in ImageGen PNG; SHA-256 source/copy equality verified. No overlay, composite, retyping, crop, upscale, or fake resolution conversion."
+  ],
+  "visuallyCheckedRows": [
+    {
+      "lesson": 1,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "1 · 08:50–09:35 | Українська мова | Математика | Англійська мова | Фізична культура | Хімія | Біологія | Математика"
+    },
+    {
+      "lesson": 2,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "2 · 09:50–10:35 | Математика | Українська мова / Англійська мова | Українська мова | Біологія | Математика | Хімія | Фізична культура"
+    },
+    {
+      "lesson": 3,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "3 · 10:50–11:35 | Фізична культура | Англійська мова / Українська мова | Математика | Хімія | Українська мова | Фізика | Всесвітня історія"
+    },
+    {
+      "lesson": 4,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "4 · 11:55–12:40 | Технології | Історія | Біологія | Математика | Англійська мова | Українська література | Фізика"
+    },
+    {
+      "lesson": 5,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "5 · 12:50–13:35 | Англійська мова | Фізична культура | Хімія | Математика | Українська література | Українська мова | Біологія"
+    },
+    {
+      "lesson": 6,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "6 · 13:45–14:30 | Пізнаємо природу | Англійська мова (1 підгрупа) / Технології (1 підгрупа) | Математика | Фізика | Мистецтво | Фізична культура | Українська мова"
+    },
+    {
+      "lesson": 7,
+      "subjectCellsChecked": 7,
+      "result": "correct",
+      "observedAndVerified": "7 · 14:40–15:25 | — | — | — | Громадянська освіта | Фізична культура | Історія | Хімія"
+    }
+  ],
+  "imageSha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4"
+}

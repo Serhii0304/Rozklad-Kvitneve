@@ -1,0 +1,367 @@
+{
+  "schemaVersion": 1,
+  "format": "A4 landscape",
+  "pageSizeMm": [
+    297,
+    210
+  ],
+  "pageSizePt": [
+    841.8897637795277,
+    595.2755905511812
+  ],
+  "generationMethod": "reportlab-image-only",
+  "originalsUnmodified": true,
+  "pdfCount": 13,
+  "imagePageCount": 17,
+  "documents": [
+    {
+      "id": "class-5-week",
+      "type": "class",
+      "path": "assets/print/class-5-week.pdf",
+      "sha256": "390e85214de72aef8f8a385a31429fe5ee47ca77c3c1a7c06b75e139f2b12fe4",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-5-week.png",
+          "sha256": "a73bd625b709917de5ffcb06d6493354e8fda2274e8db9224bf59b10fbc0724e",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-6-week",
+      "type": "class",
+      "path": "assets/print/class-6-week.pdf",
+      "sha256": "4c69da05edc3b27b618fdaed5df92ac5f269220c68f7597a1264f22580f5c376",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-6-week.png",
+          "sha256": "ea1940f30c18860c3bea8b1940ceba8aa1820ded3f863aad2b30978e388f65c5",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-7-week",
+      "type": "class",
+      "path": "assets/print/class-7-week.pdf",
+      "sha256": "79b0b1a2fed390dc11af69503e44bc9669ff4df8fc374d5c520a90a52b4f86f6",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-7-week.png",
+          "sha256": "3dc12d9b425b7996f5da3bc6ebd711732ef96afc7fe813f42351f0dd5c892d03",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-8-week",
+      "type": "class",
+      "path": "assets/print/class-8-week.pdf",
+      "sha256": "a6753731317a6cf3ba3d18ceb7f83284f9ba01e1a4964ab2a4f47d0e805d6a9f",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-8-week.png",
+          "sha256": "66a3c625ee2733affa3b2dd5a8ad9dc1d31d1f50dc878926dde79b73b630756e",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-9-week",
+      "type": "class",
+      "path": "assets/print/class-9-week.pdf",
+      "sha256": "64babb62ae1e701776e1be2cf3e1fce76f2ef76d243c9d665712226e3c8a190a",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-9-week.png",
+          "sha256": "0261da56333fc0ab4dd0647a4523656c59d35c2456d4b9a69d7cb2cbdf887416",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-10-week",
+      "type": "class",
+      "path": "assets/print/class-10-week.pdf",
+      "sha256": "53580a4b1dc939710962844cebe8c19cafc594af828af92383298715446996a7",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-10-week.png",
+          "sha256": "64bf832f9835fb77379562c493914ccf3602d97cdd3ce376f2d761bc6688619f",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "class-11-week",
+      "type": "class",
+      "path": "assets/print/class-11-week.pdf",
+      "sha256": "d9b3bd14d8f94f80359f248cad1f22c149fcda2ecd990e1b31c2821fa96ebfa1",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print/class-11-week.png",
+          "sha256": "d580ce2f887365da1d0747f1e04dca875cb0645221145476402f6f2acd379b32",
+          "width": 1491,
+          "height": 1055
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "monday",
+      "type": "day",
+      "path": "assets/print-week/monday.pdf",
+      "sha256": "0b9cb5d81e4afed26433d8ecb39cbd9a0c8a5c8e19a47da25785e48fd80bebb1",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/monday.png",
+          "sha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "tuesday",
+      "type": "day",
+      "path": "assets/print-week/tuesday.pdf",
+      "sha256": "b3f2b92bd72d2f172976aa333cdbdd9ff842cf6196d9ea848116115afcf769da",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/tuesday.png",
+          "sha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "wednesday",
+      "type": "day",
+      "path": "assets/print-week/wednesday.pdf",
+      "sha256": "5d28ae1a75a71e5b6e045b979db7b9e3e592fd54fa4c044e5aed751903bbee8f",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/wednesday.png",
+          "sha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4",
+          "width": 1491,
+          "height": 1055
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "thursday",
+      "type": "day",
+      "path": "assets/print-week/thursday.pdf",
+      "sha256": "ccf112a387df960c52484a970f64eda4e3229199e9d8ac28e2e759bf3a463e47",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/thursday.png",
+          "sha256": "222bc9753480a410ace66d9caa48d4cc79597377ef5df490ba5a9ad929985d63",
+          "width": 1491,
+          "height": 1055
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "friday",
+      "type": "day",
+      "path": "assets/print-week/friday.pdf",
+      "sha256": "705f9c2077ae6f2954547102f630c6c82874021fa84cdbb8f93db29151793166",
+      "pageCount": 1,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/friday.png",
+          "sha256": "a7297a561318952cbda1d070e917eaa394bd85464a4f7d717baf8388aaf166a9",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    },
+    {
+      "id": "week-all-classes",
+      "type": "week",
+      "path": "assets/print-week/week-all-classes.pdf",
+      "sha256": "4ee389d12ab4e1b108f379ece065f1a5cee705b0a5e25c137bfc7e904a909ba5",
+      "pageCount": 5,
+      "pageSizePt": [
+        841.8897637795277,
+        595.2755905511812
+      ],
+      "sources": [
+        {
+          "path": "assets/print-week/monday.png",
+          "sha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64",
+          "width": 1492,
+          "height": 1054
+        },
+        {
+          "path": "assets/print-week/tuesday.png",
+          "sha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
+          "width": 1492,
+          "height": 1054
+        },
+        {
+          "path": "assets/print-week/wednesday.png",
+          "sha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4",
+          "width": 1491,
+          "height": 1055
+        },
+        {
+          "path": "assets/print-week/thursday.png",
+          "sha256": "222bc9753480a410ace66d9caa48d4cc79597377ef5df490ba5a9ad929985d63",
+          "width": 1491,
+          "height": 1055
+        },
+        {
+          "path": "assets/print-week/friday.png",
+          "sha256": "a7297a561318952cbda1d070e917eaa394bd85464a4f7d717baf8388aaf166a9",
+          "width": 1492,
+          "height": 1054
+        }
+      ],
+      "validation": {
+        "singleImagePerPage": true,
+        "fullPageImage": true,
+        "noText": true,
+        "noAnnotations": true
+      }
+    }
+  ]
+}
