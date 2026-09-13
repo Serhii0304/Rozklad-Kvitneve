@@ -2,9 +2,9 @@
 #print-stage.print-measure{display:block!important;position:fixed!important;left:-10000px!important;top:0;visibility:hidden;width:276mm;pointer-events:none;}
 #print-stage .print-page{display:block;position:relative;width:276mm;height:189mm;margin:0;box-sizing:border-box;break-inside:avoid;page-break-inside:avoid;}
 #print-stage .print-sheet{width:276mm;zoom:var(--print-scale,1);margin-inline:auto;}
-#print-stage .poster-print-page{page:illustrated-poster;width:297mm;height:210mm;margin-inline:auto;}
-#print-stage .poster-print-sheet{display:flex;align-items:center;justify-content:center;width:297mm;height:210mm;}
-#print-stage .class-print-poster{display:block;object-fit:contain;width:297mm;height:210mm;max-width:297mm;}
+#print-stage .poster-print-page{page:illustrated-poster;width:287mm;height:200mm;margin-inline:auto;}
+#print-stage .poster-print-sheet{display:flex;align-items:center;justify-content:center;width:287mm;height:200mm;}
+#print-stage .class-print-poster{display:block;object-fit:contain;width:287mm;height:200mm;max-width:287mm;}
 #print-stage .print-heading{display:flex;align-items:center;justify-content:space-between;gap:8mm;padding:0 0 3mm;margin:0 0 3mm;border-bottom:1.5mm solid #315daf;}
 #print-stage .print-heading img{display:block;object-fit:contain;width:22mm;height:22mm;}
 #print-stage .print-school{font-size:10pt;font-weight:700;margin:0 0 1mm;color:#405774;}
@@ -60,7 +60,7 @@
 #print-stage *,#print-stage *::before,#print-stage *::after{animation:none!important;transition:none!important;print-color-adjust:exact;-webkit-print-color-adjust:exact;}
 @media print{
  @page{size:A4 landscape;margin:10mm;}
- @page illustrated-poster{size:A4 landscape;margin:0;}
+ @page illustrated-poster{size:A4 landscape;margin:5mm;}
  html,body{margin:0!important;padding:0!important;background:#fff!important;color:#172b45;color-scheme:light!important;}
  body::before,body::after,.header,.shell,.skip,.noscript,.back-to-top{display:none!important;}
  #print-stage{display:block!important;position:static!important;visibility:visible!important;margin:0;padding:0;}

@@ -6,7 +6,7 @@ export function posterForClass(config,grade){
   if(index<0)return null;
   const id=classGrade(config,index);
   if(!/^(?:[5-9]|10|11)$/.test(id))return null;
-  return {grade:id,label:config.classes[index],imagePath:'assets/print/class-'+id+'-week.png',pdfPath:'assets/print/class-'+id+'-week.pdf',previewPath:'assets/print/class-'+id+'-preview.webp',pagePath:'print.html?class='+encodeURIComponent(id),downloadName:'Квітневий ліцей — '+config.classes[index]+' — розклад 2026-2027.png'};
+  return {grade:id,label:config.classes[index],imagePath:'assets/print/class-'+id+'-week.png',pdfPath:'assets/print/class-'+id+'-week.pdf',previewPath:'assets/print/class-'+id+'-preview.webp',printImagePath:'assets/print-ready/class-'+id+'-week.png',printPreviewPath:'assets/print-ready/class-'+id+'-week-preview.webp',pagePath:'print.html?class='+encodeURIComponent(id),downloadName:'Квітневий ліцей — '+config.classes[index]+' — розклад 2026-2027.png'};
 }
 
 export function posterPrintMarkup(poster){

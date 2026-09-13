@@ -20,6 +20,8 @@ export function weekPosterForDay(config,dayOrIndex){
     imagePath:`assets/print-week/${day.id}.png`,
     pdfPath:`assets/print-week/${day.id}.pdf`,
     previewPath:`assets/print-week/${day.id}-preview.webp`,
+    printImagePath:`assets/print-ready/${day.id}.png`,
+    printPreviewPath:`assets/print-ready/${day.id}-preview.webp`,
     pagePath:`week-print.html?day=${encodeURIComponent(day.id)}`,
     kind:'school-week',
     downloadName:`Квітневий ліцей — ${day.label} — усі класи — розклад 2026-2027.png`

@@ -17,7 +17,8 @@ const week=wholeWeekPosters(C);
 for(const p of week)expected.set(p.pdfPath,{type:'day',sources:[p.imagePath]});
 expected.set(wholeWeekPdfPath,{type:'week',sources:week.map(p=>p.imagePath)});
 const manifest=JSON.parse(read('assets/print-pdfs.json'));
-assert.equal(manifest.schemaVersion,1);assert.equal(manifest.generationMethod,'reportlab-image-only');
+assert.equal(manifest.schemaVersion,2);assert.equal(manifest.generationMethod,'reportlab-image-only');
+assert.equal(manifest.safetyMarginMm,5);
 assert.equal(manifest.originalsUnmodified,true);assert.deepEqual(manifest.pageSizeMm,[297,210]);
 assert.equal(manifest.pdfCount,13);assert.equal(manifest.documents.length,13);assert.equal(manifest.imagePageCount,17);
 const seen=new Set();let pageCount=0;
@@ -27,9 +28,18 @@ for(const document of manifest.documents){
  assert.equal(document.type,item.type);assert.equal(document.pageCount,item.sources.length);pageCount+=document.pageCount;
  assert.deepEqual(document.sources.map(s=>s.path),item.sources);
  assert.ok(Math.abs(document.pageSizePt[0]-841.8897637795277)<.001&&Math.abs(document.pageSizePt[1]-595.2755905511812)<.001);
- for(const field of ['singleImagePerPage','fullPageImage','noText','noAnnotations'])assert.equal(document.validation[field],true);
+ for(const field of ['singleImagePerPage','withinPrintableArea','uncroppedImage','noText','noAnnotations'])assert.equal(document.validation[field],true);
+ assert.equal(document.placementsPt.length,item.sources.length);
+ document.placementsPt.forEach(({x,y,width,height},index)=>{
+  const [pageWidth,pageHeight]=document.pageSizePt,margin=manifest.safetyMarginMm*72/25.4;
+  const source=document.sources[index],scale=Math.min((pageWidth-2*margin)/source.width,(pageHeight-2*margin)/source.height);
+  assert.ok([x,y,width,height].every(Number.isFinite));
+  assert.ok(x>=margin-.001&&y>=margin-.001&&x+width<=pageWidth-margin+.001&&y+height<=pageHeight-margin+.001,'Unsafe print margin: '+document.path);
+  assert.ok(Math.abs(width-source.width*scale)<.001&&Math.abs(height-source.height*scale)<.001,'Image proportions changed: '+document.path);
+  assert.ok(Math.abs(x-(pageWidth-width)/2)<.001&&Math.abs(y-(pageHeight-height)/2)<.001,'Image is not centered: '+document.path);
+ });
  const pdf=read(document.path);assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert.equal(hash(pdf),document.sha256,'Changed PDF: '+document.path);
  for(const source of document.sources){const png=read(source.path);assert.equal(hash(png),source.sha256,'Regenerate PDFs after changing '+source.path);assert.deepEqual([png.readUInt32BE(16),png.readUInt32BE(20)],[source.width,source.height]);}
 }
 assert.equal(seen.size,expected.size);assert.equal(pageCount,17);
-console.log('13 verified image-only A4 PDFs: 17 full-page images, no added text or margins.');
+console.log('13 verified image-only A4 PDFs: 17 centered, uncropped images with minimum 5 mm print margins.');

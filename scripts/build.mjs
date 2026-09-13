@@ -5,10 +5,12 @@ files.push(...fs.readdirSync('assets/subjects').filter(x=>x.endsWith('.svg')).ma
 files.push(...fs.readdirSync('assets/print').filter(x=>/\.(png|webp|json|pdf)$/.test(x)).map(x=>'assets/print/'+x));
 files.push(...fs.readdirSync('assets/print-generation').filter(x=>/\.(json|txt|md)$/.test(x)).map(x=>'assets/print-generation/'+x));
 files.push(...fs.readdirSync('assets/print-week').filter(x=>/\.(png|webp|json|pdf)$/.test(x)).map(x=>'assets/print-week/'+x));
+files.push(...fs.readdirSync('assets/print-ready').filter(x=>/\.(png|webp|json)$/.test(x)).map(x=>'assets/print-ready/'+x));
 files.push(...fs.readdirSync('assets/print-week-generation').filter(x=>/\.(json|txt|md)$/.test(x)).map(x=>'assets/print-week-generation/'+x));
 execFileSync(process.execPath,['scripts/validate-generated-posters.mjs'],{stdio:'inherit'});
 execFileSync(process.execPath,['scripts/validate-week-posters.mjs'],{stdio:'inherit'});
 execFileSync(process.execPath,['scripts/validate-print-pdfs.mjs'],{stdio:'inherit'});
+execFileSync(process.execPath,['scripts/validate-print-images.mjs'],{stdio:'inherit'});
 for(const name of files){if(!fs.existsSync(name))throw new Error('Missing '+name);if(/\.(mjs|js)$/.test(name))execFileSync(process.execPath,['--check',name]);}
 const html=fs.readFileSync('index.html','utf8');for(const [,ref]of html.matchAll(/(?:src|href)="([^"]+)"/g)){if(/^(?:https?:|#|\.\/)/.test(ref))continue;if(!fs.existsSync(ref.split(/[?#]/)[0]))throw new Error('Broken reference '+ref);}
 for(const name of files.filter(x=>x.endsWith('.mjs'))){for(const [,ref]of fs.readFileSync(name,'utf8').matchAll(/from ['"](\.\/[^'"]+)['"]/g))if(!fs.existsSync(path.resolve(root,ref.split(/[?#]/)[0])))throw new Error('Missing import '+ref);}

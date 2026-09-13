@@ -1,5 +1,5 @@
-import {wholeWeekPosters,weekPosterForDay,wholeWeekPdfPath} from './week-posters.mjs';
-import {openPrintPdf} from './print-files.mjs?v=20260912-pdf-download';
+import {wholeWeekPosters,weekPosterForDay,wholeWeekPdfPath} from './week-posters.mjs?v=20260913-safe-print';
+import {openPrintPdf} from './print-files.mjs?v=20260913-safe-print';
 const C=window.SchoolScheduleConfig;
 const pages=wholeWeekPosters(C);
 const selected=weekPosterForDay(C,new URLSearchParams(location.search).get('day'));
@@ -21,15 +21,15 @@ for(const [index,page] of pages.entries()){
  const article=document.createElement('article');article.className='week-poster-preview';article.id='day-'+page.dayId;
  const heading=document.createElement('h2');heading.textContent=page.label+' · 5–11 класи';article.append(heading);
  const figure=document.createElement('figure');figure.className='poster-frame';
- const preview=document.createElement('img');preview.src=page.previewPath;preview.alt='Загальний розклад: '+page.label+', усі 5–11 класи';preview.width=1400;preview.height=989;preview.loading=index?'lazy':'eager';figure.append(preview);
+ const preview=document.createElement('img');preview.src=page.printPreviewPath;preview.alt='Загальний розклад: '+page.label+', усі 5–11 класи';preview.width=1400;preview.height=990;preview.loading=index?'lazy':'eager';figure.append(preview);
  const actions=document.createElement('figcaption');actions.className='week-page-actions';
  const printButton=document.createElement('button');printButton.type='button';printButton.textContent='Друкувати цей день';printButton.disabled=true;printButton.addEventListener('click',()=>printPages(page.dayId));
- const download=document.createElement('a');download.href=page.imagePath;download.download=page.downloadName;download.textContent='Зберегти PNG';
+ const download=document.createElement('a');download.href=page.printImagePath;download.download=page.downloadName;download.textContent='Зберегти PNG';
  const resolution=document.createElement('span');resolution.textContent='A4 · альбомний аркуш';
  actions.append(printButton,download,resolution);figure.append(actions);article.append(figure);$('#week-previews').append(article);
  const sheet=document.createElement('section');sheet.className='week-print-sheet';sheet.dataset.day=page.dayId;
  const original=document.createElement('img');original.alt=preview.alt;
- original.addEventListener('load',()=>{loaded++;printButton.disabled=false;resolution.textContent=original.naturalWidth+' × '+original.naturalHeight+' px · A4';updateStatus();});
+ original.addEventListener('load',()=>{loaded++;printButton.disabled=false;resolution.textContent='A4 · поля 5 мм';updateStatus();});
  original.addEventListener('error',()=>{failed++;updateStatus();});
  original.src=page.imagePath;sheet.append(original);$('#week-print-area').append(sheet);sheets.set(page.dayId,{sheet,original});
 }

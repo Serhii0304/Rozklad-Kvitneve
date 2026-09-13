@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Wrap the accepted, unchanged timetable PNGs in full-page A4 landscape PDFs.
+"""Fit the accepted, unchanged timetable PNGs inside A4 landscape print margins.
 
 Requires Pillow, reportlab and pypdf. Run from any working directory. No raster
-edits, page decorations, captions or print margins are applied. The --check
+edits, page decorations or captions are applied. Images are centered with at
+least 5 mm of white paper on every side, without stretching or cropping. The --check
 option verifies the published files and source checksums without writing files.
 """
 
@@ -18,6 +19,7 @@ from PIL import Image
 from pypdf import PdfReader, PdfWriter
 from pypdf.generic import ContentStream, NameObject
 from reportlab.lib.pagesizes import A4, landscape
+from reportlab.lib.units import mm
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 
@@ -25,6 +27,9 @@ from reportlab.pdfgen import canvas
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "assets/print-pdfs.json"
 PAGE_SIZE = landscape(A4)
+SAFETY_MARGIN_MM = 5
+SAFETY_MARGIN_PT = SAFETY_MARGIN_MM * mm
+GEOMETRY_TOLERANCE_PT = 0.0001
 DAYS = ("monday", "tuesday", "wednesday", "thursday", "friday")
 TEXT_OPERATORS = {b"BT", b"ET", b"Tf", b"TL", b"Tj", b"TJ", b"'", b'"'}
 
@@ -67,14 +72,27 @@ def public_source(source: dict) -> dict:
     return {key: source[key] for key in ("path", "sha256", "width", "height")}
 
 
+def placement(source: dict) -> dict:
+    """Largest proportional image centered within the 287 x 200 mm area."""
+    available_width = PAGE_SIZE[0] - 2 * SAFETY_MARGIN_PT
+    available_height = PAGE_SIZE[1] - 2 * SAFETY_MARGIN_PT
+    scale = min(available_width / source["width"],
+                available_height / source["height"])
+    width = source["width"] * scale
+    height = source["height"] * scale
+    return {"x": (PAGE_SIZE[0] - width) / 2,
+            "y": (PAGE_SIZE[1] - height) / 2,
+            "width": width, "height": height}
+
+
 def create_pdf(sources: list[dict]) -> bytes:
     buffer = io.BytesIO()
     document = canvas.Canvas(buffer, pagesize=PAGE_SIZE, pageCompression=1,
                              invariant=1, bottomup=1)
     for source in sources:
-        document.drawImage(ImageReader(io.BytesIO(source["data"])), 0, 0,
-                           width=PAGE_SIZE[0], height=PAGE_SIZE[1],
-                           preserveAspectRatio=False, mask=None)
+        image_placement = placement(source)
+        document.drawImage(ImageReader(io.BytesIO(source["data"])),
+                           **image_placement, preserveAspectRatio=True, mask=None)
         document.showPage()
     document.save()
 
@@ -105,7 +123,7 @@ def validate_pdf(data: bytes, sources: list[dict]) -> dict:
     assert not reader.trailer["/Root"].get("/AcroForm"), "Unexpected form"
     for index, (page, source) in enumerate(zip(reader.pages, sources), start=1):
         size = [float(page.mediabox.width), float(page.mediabox.height)]
-        assert all(abs(actual - expected) < 0.0001
+        assert all(abs(actual - expected) < GEOMETRY_TOLERANCE_PT
                    for actual, expected in zip(size, PAGE_SIZE)), (index, size)
         assert list(page.cropbox) == list(page.mediabox), "Unexpected crop"
         assert float(page.mediabox.left) == float(page.mediabox.bottom) == 0
@@ -125,18 +143,31 @@ def validate_pdf(data: bytes, sources: list[dict]) -> dict:
         assert not image.get("/SMask") and not image.get("/Mask")
         assert image.get_data() == source["pixels"], "Image pixels changed"
         operations = ContentStream(page.get_contents(), reader).operations
-        assert all(operator in {b"cm", b"q", b"Do", b"Q"}
-                   for _, operator in operations), "Unexpected page content"
+        assert [operator for _, operator in operations] == \
+            [b"cm", b"q", b"cm", b"Do", b"Q"], \
+            "Expected one image draw inside its placement transform, without clipping"
         draws = [operands for operands, operator in operations if operator == b"Do"]
         assert draws == [[name]], "Expected exactly one image draw per page"
         matrices = [list(map(float, operands)) for operands, operator in operations
                     if operator == b"cm"]
         assert len(matrices) == 2 and matrices[0] == [1, 0, 0, 1, 0, 0]
-        expected_matrix = [PAGE_SIZE[0], 0, 0, PAGE_SIZE[1], 0, 0]
-        assert all(abs(actual - expected) < 0.0001
+        expected = placement(source)
+        expected_matrix = [expected["width"], 0, 0, expected["height"],
+                           expected["x"], expected["y"]]
+        assert all(abs(actual - expected) < GEOMETRY_TOLERANCE_PT
                    for actual, expected in zip(matrices[1], expected_matrix)), \
-            "Image must fill the page without margins"
-    return {"singleImagePerPage": True, "fullPageImage": True,
+            "Image must fit proportionally and be centered in the printable area"
+        width, _, _, height, x, y = matrices[1]
+        margins = (x, y, size[0] - x - width, size[1] - y - height)
+        assert min(margins) >= SAFETY_MARGIN_PT - GEOMETRY_TOLERANCE_PT, \
+            "Image crosses the 5 mm safety margin"
+        assert abs(width / source["width"] - height / source["height"]) < \
+            GEOMETRY_TOLERANCE_PT / max(source["width"], source["height"]), \
+            "Image must keep its original aspect ratio"
+        assert abs(x - margins[2]) < GEOMETRY_TOLERANCE_PT
+        assert abs(y - margins[3]) < GEOMETRY_TOLERANCE_PT
+    return {"singleImagePerPage": True, "withinPrintableArea": True,
+            "uncroppedImage": True,
             "noText": True, "noAnnotations": True}
 
 
@@ -155,10 +186,12 @@ def build(check_only: bool) -> None:
                         "path": spec["path"], "sha256": sha256(data),
                         "pageCount": len(page_sources), "pageSizePt": list(PAGE_SIZE),
                         "sources": [public_source(source) for source in page_sources],
+                        "placementsPt": [placement(source) for source in page_sources],
                         "validation": validation})
         outputs.append((ROOT / spec["path"], data))
-    manifest = {"schemaVersion": 1, "format": "A4 landscape",
+    manifest = {"schemaVersion": 2, "format": "A4 landscape",
                 "pageSizeMm": [297, 210], "pageSizePt": list(PAGE_SIZE),
+                "safetyMarginMm": SAFETY_MARGIN_MM,
                 "generationMethod": "reportlab-image-only", "originalsUnmodified": True,
                 "pdfCount": len(records),
                 "imagePageCount": sum(record["pageCount"] for record in records),
@@ -175,7 +208,8 @@ def build(check_only: bool) -> None:
     for path, source in sources.items():
         assert sha256((ROOT / path).read_bytes()) == source["sha256"], "Original PNG changed"
     print(f"{'Verified' if check_only else 'Created and verified'} {len(records)} PDFs, "
-          f"{manifest['imagePageCount']} image-only A4 landscape pages; no text or margins.")
+          f"{manifest['imagePageCount']} image-only A4 landscape pages; "
+          f"proportional centered fit, minimum {SAFETY_MARGIN_MM} mm margins, no cropping or text.")
 
 
 if __name__ == "__main__":
