@@ -27,6 +27,6 @@ test('PDF is delivered through a download link without popups or leaving the sou
  try{
   globalThis.document={createElement:tag=>{assert.equal(tag,'a');return link;},body:{append:item=>assert.equal(item,link)}};
   openPrintPdf('assets/print/class-10-week.pdf');
-  assert.deepEqual(calls,[{href:'assets/print/class-10-week.pdf?v=20260913-safe-print',download:'class-10-week.pdf'},'removed']);
+  assert.deepEqual(calls,[{href:'assets/print/class-10-week.pdf?v=20260913-schedule-1',download:'class-10-week.pdf'},'removed']);
  }finally{if(previous===undefined)delete globalThis.document;else globalThis.document=previous;}
 });

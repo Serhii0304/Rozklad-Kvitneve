@@ -1,5 +1,5 @@
-import {posterForClass} from './print-posters.mjs?v=20260913-safe-print';
-import {openPrintPdf} from './print-files.mjs?v=20260913-safe-print';
+import {posterForClass} from './print-posters.mjs?v=20260913-schedule-1';
+import {openPrintPdf} from './print-files.mjs?v=20260913-schedule-1';
 const C=window.SchoolScheduleConfig;
 const $=selector=>document.querySelector(selector);
 const requested=new URLSearchParams(location.search).get('class');
@@ -15,13 +15,13 @@ for(const label of C.classes){
   if(item.grade===poster.grade)link.setAttribute('aria-current','page');
   $('#poster-classes').append(link);
 }
-$('#download-poster').href=poster.printImagePath;
+$('#download-poster').href=poster.printImagePath+'?v=20260913-schedule-1';
 $('#download-poster').download=poster.downloadName;
 $('#poster-preview').alt=poster.label+' — повний тижневий розклад з уроками, підгрупами й дзвінками';
-$('#poster-preview').src=poster.printPreviewPath;
+$('#poster-preview').src=poster.printPreviewPath+'?v=20260913-schedule-1';
 const original=$('#poster-original');
 original.alt=$('#poster-preview').alt;
 original.addEventListener('load',()=>{ $('#print-poster').disabled=false;$('#poster-status').textContent=''; });
 original.addEventListener('error',()=>{ $('#poster-status').textContent='Не вдалося завантажити зображення. Оновіть сторінку.'; });
-original.src=poster.imagePath;
+original.src=poster.imagePath+'?v=20260913-schedule-1';
 $('#print-poster').addEventListener('click',()=>openPrintPdf(poster.pdfPath));

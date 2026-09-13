@@ -2,13 +2,13 @@ import {bellsMarkup,updateBellHighlights} from './bells-view.mjs?v=20260913-comp
 import {bellsPoster} from './bells-poster.mjs';
 import {subjectCellMarkup,subjectsInLesson} from './lesson-content.mjs';
 import {enhanceTableNavigation} from './table-navigation.mjs';
-import {posterForClass} from './print-posters.mjs?v=20260913-bells-poster';
+import {posterForClass} from './print-posters.mjs?v=20260913-schedule-1';
 import {weekPosterForDay,wholeWeekPosters} from './week-posters.mjs?v=20260913-safe-print';
-import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs?v=20260913-bells-poster';
+import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs?v=20260913-schedule-1';
 import {readViewState,selectViewMode} from './view-mode.mjs';
 import {displaySchoolState} from './live-state.mjs';
 import {classIndex,classGrade,classRangeLabel} from './time-core.mjs';
-import {printPagesMarkup,fitPrintPages,settlePrintAssets} from './print-layout.mjs?v=20260913-bells-poster';
+import {printPagesMarkup,fitPrintPages,settlePrintAssets} from './print-layout.mjs?v=20260913-schedule-1';
 import {subjectIconMarkup} from './subject-icons.mjs';
 import {classWeekMarkup} from './schedule-view.mjs';
 import './effects.mjs';

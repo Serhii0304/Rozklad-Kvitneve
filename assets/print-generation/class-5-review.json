@@ -1,20 +1,21 @@
 {
+  "id": "class-5",
   "grade": 5,
   "method": "builtin-imagegen-full",
-  "sourceGeneratedPath": "exec-0af770e7-5f09-442f-aefd-0ba32ec6105b.png",
-  "promptPath": "assets/print-generation/class-5-prompt.txt",
-  "nativeWidth": 1492,
-  "nativeHeight": 1054,
+  "operation": "builtin-imagegen-edit",
+  "accepted": true,
+  "cellsChecked": 35,
   "titlesCentered": true,
   "spellingChecked": true,
   "timesChecked": true,
-  "cellsChecked": 35,
   "remainingIssues": [],
-  "accepted": true,
-  "notes": [
-    "All35 subject cells read visually against source. Row7 has five empty cells; row6 Tuesday and Thursday are also blank. Informatics subgroup1 Tuesday5 and subgroup2 Friday6 preserved.",
-    "Exact titles and all seven bell ranges verified.",
-    "A targeted ImageGen edit removed unsolicited peripheral quotations and changed Arts icon to theatre masks; no programmatic text overlay or retouching."
-  ],
-  "imageSha256": "a73bd625b709917de5ffcb06d6493354e8fda2274e8db9224bf59b10fbc0724e"
+  "sourceGeneratedPath": "exec-5d31ea42-4bea-47f3-a651-072ed21f71f7.png",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "notes": "Visually inspected all 35 cells in the generated full image against artwork-tasks.json: Thursday lesson 1 is Physical Education with shoes/ball, lesson 3 is History with hourglass; all 33 other cells, 7 exact time ranges, 7 blank cells, Tuesday subgroup 1 and Friday subgroup 2 are preserved. Header remains centered, style and grid preserved. Copy SHA-256 equals untouched generated source.",
+  "promptPath": "assets/print-generation/class-5-prompt.txt",
+  "sourceDocument": "новий розклад 2027_1.docx",
+  "sourceDocumentSha256": "8acdd0c3a8932bac9c38c137dc37057ec55317df747b14316a5c3b82d009c723",
+  "basedOnImageSha256": "a73bd625b709917de5ffcb06d6493354e8fda2274e8db9224bf59b10fbc0724e",
+  "imageSha256": "10d345cd835443ec4a88df02a3f262078fe3f58a713e1cedadb97a4e037dc3f2"
 }

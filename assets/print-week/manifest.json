@@ -5,7 +5,7 @@
   "style": "academic-navy-ivory-gold-v1",
   "originalsUnmodified": true,
   "configHashMethod": "sha256(JSON.stringify(parsed SchoolScheduleConfig))",
-  "configSha256": "a806a4fc634ba11666949b49229abc4e26816f33d44a048b4588471a674c1687",
+  "configSha256": "6116c7805e1d2316324cddfdedaddd9c3681ff656ca210703d89d00a44e1a76c",
   "reviewMethod": "Recorded visual review of generated titles, spelling, lesson times and all 49 cells per image. Checksums link those records to accepted PNGs; validation does not perform OCR.",
   "complete": true,
   "posters": [
@@ -16,12 +16,12 @@
       "previewPath": "assets/print-week/monday-preview.webp",
       "width": 1492,
       "height": 1054,
-      "sha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64",
-      "previewSha256": "5acebfd1e8de5434f3030ef990981730b2c54d4ce3b178f3cf06b682958569d1",
+      "sha256": "51dadfb29495b55cecc6d440fcc894cb0d537846b79f87d838cd2ebbc886ae4c",
+      "previewSha256": "2485235b9c03c5df5e88fe8de6ce14d6a8cb2fcef4406521ae322cb5e0e88c69",
       "promptPath": "assets/print-week-generation/monday-prompt.txt",
-      "promptSha256": "6be20b7bfa15ea635f36de05a38587445ed801aec3791a6f382b6a3573f16f9c",
+      "promptSha256": "5d1acf73eb4f2f3a632c6cc3d237f49fc19139643750514bc18fe4549c81f4c1",
       "reviewPath": "assets/print-week-generation/monday-review.json",
-      "reviewSha256": "746874b8052ae009e295667e56bbabe3ba1746a71ee95e9d83c725427028bdc7",
+      "reviewSha256": "f37c629a002a8f854051894e67567a6ebd4690d94208110d7c1206cf3ba703b8",
       "cellCount": 49,
       "filledCount": 45,
       "cells": [
@@ -121,7 +121,7 @@
           "lesson": 2,
           "start": "09:50",
           "end": "10:35",
-          "value": "Технології"
+          "value": "Історія"
         },
         {
           "className": "5 клас",
@@ -366,7 +366,7 @@
           "lesson": 7,
           "start": "14:40",
           "end": "15:25",
-          "value": "Історія"
+          "value": "Технології"
         }
       ]
     },
@@ -377,12 +377,12 @@
       "previewPath": "assets/print-week/tuesday-preview.webp",
       "width": 1492,
       "height": 1054,
-      "sha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
-      "previewSha256": "c4e88294232e325f0fe5dc6a581348c4837ac0f011bd17d5f5a9fd661bd52550",
+      "sha256": "78700fad926805b6e392733e7d379b974f4f15612f9873159b39679717dbd4ca",
+      "previewSha256": "e057edad78b8d7517b8d487659fc5d55a0cf3b1f53a56dd364f051ed19cd207b",
       "promptPath": "assets/print-week-generation/tuesday-prompt.txt",
-      "promptSha256": "f5e96481047366d6ea8e4b67998b0f6808ec87886ba7f98eefba7f2d87586e56",
+      "promptSha256": "aea032ab78a515cd42d744d62d99f32299f232cfc7d60c2f705ee85ad01386d6",
       "reviewPath": "assets/print-week-generation/tuesday-review.json",
-      "reviewSha256": "7ef3d5957d98dfa5e57cefe03cccc3b589d138dfc7234ab3674c34a84960a8ff",
+      "reviewSha256": "fc773e0de16184af662beba166abc8c61bb0568768efc840468f50498096d3ee",
       "cellCount": 49,
       "filledCount": 44,
       "cells": [
@@ -517,7 +517,7 @@
           "lesson": 3,
           "start": "10:50",
           "end": "11:35",
-          "value": "Фізика"
+          "value": "Всесвітня історія"
         },
         {
           "className": "10 клас",
@@ -713,7 +713,7 @@
           "lesson": 7,
           "start": "14:40",
           "end": "15:25",
-          "value": "Всесвітня історія"
+          "value": "Фізика"
         },
         {
           "className": "10 клас",
@@ -738,12 +738,12 @@
       "previewPath": "assets/print-week/wednesday-preview.webp",
       "width": 1491,
       "height": 1055,
-      "sha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4",
-      "previewSha256": "9a1f5aec2762c33e5b152e6c0266e84eb719cd1a3afda250ababc79557419810",
+      "sha256": "2fb99b9bedbe3ed86c816d117a9da54f67480e92c3c5b90479828061f9731dc0",
+      "previewSha256": "549a2322703af2d4d104622331dd8f78be90439b04a2822f12f7315d7c3de450",
       "promptPath": "assets/print-week-generation/wednesday-prompt.txt",
-      "promptSha256": "3e21879894c47b2c674cbbe14d0e8e6f4e245c806d6578366c80f9c07ec44b60",
+      "promptSha256": "bc498dc9385b00b6bd8d71fd2524f0424d427d75a2c7eb84905f2bd563ec3955",
       "reviewPath": "assets/print-week-generation/wednesday-review.json",
-      "reviewSha256": "ae5b266fc7de024c82515b07d794325e8dec1aac77fd5af19c8d6f4c9f24e1af",
+      "reviewSha256": "a724cee00189061f84a1aefb7bd0a60df9625178928469a9cb1f643fc7484504",
       "cellCount": 49,
       "filledCount": 46,
       "cells": [
@@ -787,7 +787,7 @@
           "lesson": 1,
           "start": "08:50",
           "end": "09:35",
-          "value": "Біологія"
+          "value": "Історія"
         },
         {
           "className": "11 клас",
@@ -1081,7 +1081,7 @@
           "lesson": 7,
           "start": "14:40",
           "end": "15:25",
-          "value": "Історія"
+          "value": "Біологія"
         },
         {
           "className": "11 клас",
@@ -1099,12 +1099,12 @@
       "previewPath": "assets/print-week/thursday-preview.webp",
       "width": 1491,
       "height": 1055,
-      "sha256": "222bc9753480a410ace66d9caa48d4cc79597377ef5df490ba5a9ad929985d63",
-      "previewSha256": "f2f82fd7e888b078f35524cfc56721ba7e51390728cbecb3fc8bf44e175cdb58",
+      "sha256": "f75cea48f82795a8d0d25134e1cd4d11c636736e2c7eb46ec552b01a43ba1650",
+      "previewSha256": "b1a4300ca669d2a851c024819cd52e48ef89719be4b5db954ccb9bc2e9707256",
       "promptPath": "assets/print-week-generation/thursday-prompt.txt",
-      "promptSha256": "90f13c8ddc9c6fb76dd6cae5a10e6c3da8ef09f40a9559adc973fbae89d807cc",
+      "promptSha256": "5f50af8c2b232000367f6f5c3b589fa490bfddf35d7112da644f14241ac00cd3",
       "reviewPath": "assets/print-week-generation/thursday-review.json",
-      "reviewSha256": "7bdcf9c475ac259b34e58fea0118b9b61373530d771a359eaedb9c77301d1840",
+      "reviewSha256": "2652602948d0e0dcb484ccb6ecb113586c31519f5b971f0d5339ed51284a00c3",
       "cellCount": 49,
       "filledCount": 45,
       "cells": [
@@ -1113,7 +1113,7 @@
           "lesson": 1,
           "start": "08:50",
           "end": "09:35",
-          "value": "Історія"
+          "value": "Фізична культура"
         },
         {
           "className": "6 клас",
@@ -1127,7 +1127,7 @@
           "lesson": 1,
           "start": "08:50",
           "end": "09:35",
-          "value": "Зарубіжна література"
+          "value": "Всесвітня історія"
         },
         {
           "className": "8 клас",
@@ -1211,7 +1211,7 @@
           "lesson": 3,
           "start": "10:50",
           "end": "11:35",
-          "value": "Фізична культура"
+          "value": "Історія"
         },
         {
           "className": "6 клас",
@@ -1421,7 +1421,7 @@
           "lesson": 7,
           "start": "14:40",
           "end": "15:25",
-          "value": "Всесвітня історія"
+          "value": "Зарубіжна література"
         },
         {
           "className": "8 клас",

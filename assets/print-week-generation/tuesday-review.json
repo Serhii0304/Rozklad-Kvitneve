@@ -1,76 +1,24 @@
 {
+  "id": "tuesday",
   "dayId": "tuesday",
   "method": "builtin-imagegen-full",
-  "sourceGeneratedPath": "exec-ac923649-c85f-498c-a5d9-16f4899c1a59.png",
-  "promptPath": "assets/print-week-generation/tuesday-prompt.txt",
-  "generationPromptPath": "E:/Мої файли/Робочий стіл 12.09.2026/Школи 2026-2027/Квітневий ліцей/.schedule-work/general-week-prompts/tuesday-initial-style-reference.txt",
-  "editPromptPaths": [
-    "E:/Мої файли/Робочий стіл 12.09.2026/Школи 2026-2027/Квітневий ліцей/.schedule-work/general-week-prompts/tuesday-edit-small-icons-1.txt"
-  ],
-  "nativeWidth": 1492,
-  "nativeHeight": 1054,
+  "operation": "builtin-imagegen-edit",
+  "accepted": true,
+  "cellsChecked": 49,
   "titlesCentered": true,
   "spellingChecked": true,
   "timesChecked": true,
-  "cellsChecked": 49,
-  "remainingIssues": [],
-  "accepted": true,
+  "iconsApproved": true,
   "styleMatched": true,
   "gridFillsPage": true,
-  "iconsApproved": true,
-  "iconSizing": "user-approved-medium-below-text",
-  "userSelectedStyle": true,
-  "notes": [
-    "Read all 49 cells row by row against exact Tuesday prompt. The grade 10 paired rows 1 and 3 preserve opposite subject order, and grade 11 paired rows 2 and 4 retain Defence group 1 / Informatics group 2.",
-    "Grade 5 row 5 retains Informatics group 1. Grade 6 German/Ukrainian pairs are in the correct order in rows 1 and 3. Empty cells are exactly grade 5 rows 6/7, grade 6 row 7, grade 8 row 7 and grade 11 row 7.",
-    "Ukrainian literature has brown quill/book, distinct from Ukrainian language notebook/blue pen; Art is masks/music, distinct from Fine Art palette.",
-    "All seven bell ranges verified as 08:50–09:35, 09:50–10:35, 10:50–11:35, 11:55–12:40, 12:50–13:35, 13:45–14:30, 14:40–15:25.",
-    "Compared against the user-selected Monday medium-icons-below-text attachment; same navy/ivory/gold, serif bold labels, compact centered titles, eight columns, seven rows, full-page table and fine outer border. User's selected medium icon style supersedes earlier tiny-icon targets.",
-    "Final is an unchanged copy of selected raw built-in ImageGen PNG; SHA-256 source/copy equality verified. No overlay, composite, retyping, crop, upscale, or fake resolution conversion."
-  ],
-  "visuallyCheckedRows": [
-    {
-      "lesson": 1,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "1 · 08:50–09:35 | Українська мова | Німецька мова / Українська мова | Історія України | Математика | Біологія | Захист України (1 підгрупа) / Інформатика (2 підгрупа) | Українська мова"
-    },
-    {
-      "lesson": 2,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "2 · 09:50–10:35 | Німецька мова | Математика | Англійська мова | Українська мова | Математика | Українська мова | Захист України (1 підгрупа) / Інформатика (2 підгрупа)"
-    },
-    {
-      "lesson": 3,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "3 · 10:50–11:35 | Математика | Українська мова / Німецька мова | Географія | Фізична культура | Фізика | Інформатика (2 підгрупа) / Захист України (1 підгрупа) | Англійська мова"
-    },
-    {
-      "lesson": 4,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "4 · 11:55–12:40 | Українська література | Історія | Математика | Німецька мова | Фізична культура | Географія | Захист України (1 підгрупа) / Інформатика (2 підгрупа)"
-    },
-    {
-      "lesson": 5,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "5 · 12:50–13:35 | Інформатика (1 підгрупа) | Здоров’я, безпека та добробут | Німецька мова | Математика | Історія | Математика | Географія"
-    },
-    {
-      "lesson": 6,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "6 · 13:45–14:30 | — | Математика | Українська мова | Мистецтво | Німецька мова | Історія | Фізична культура"
-    },
-    {
-      "lesson": 7,
-      "subjectCellsChecked": 7,
-      "result": "correct",
-      "observedAndVerified": "7 · 14:40–15:25 | — | — | Образотворче мистецтво | — | Всесвітня історія | Фізична культура | —"
-    }
-  ],
-  "imageSha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58"
+  "remainingIssues": [],
+  "sourceGeneratedPath": "exec-d19e0899-0297-4ffc-a75a-490889f44e13.png",
+  "nativeWidth": 1492,
+  "nativeHeight": 1054,
+  "notes": "Visually reviewed all 49 cells, seven times, all five empty dashes, language split orders and subgroup qualifiers against canonical task rows. Grade 9 lesson 3 is Всесвітня історія with existing classical temple illustration; grade 9 lesson 7 is Фізика with existing atom illustration. All other cells, centered headings, grid filling the page, typography, colors and ornaments retained. Final PNG is a byte-for-byte copy of the untouched built-in ImageGen edit.",
+  "promptPath": "assets/print-week-generation/tuesday-prompt.txt",
+  "sourceDocument": "новий розклад 2027_1.docx",
+  "sourceDocumentSha256": "8acdd0c3a8932bac9c38c137dc37057ec55317df747b14316a5c3b82d009c723",
+  "basedOnImageSha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
+  "imageSha256": "78700fad926805b6e392733e7d379b974f4f15612f9873159b39679717dbd4ca"
 }

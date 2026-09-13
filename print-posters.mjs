@@ -11,5 +11,5 @@ export function posterForClass(config,grade){
 
 export function posterPrintMarkup(poster){
   const alt=poster.kind==='bells'?'Розклад дзвінків Квітневого ліцею, І семестр 2026–2027':poster.kind==='school-week'?poster.label+' — загальний розклад 5–11 класів Квітневого ліцею, І семестр 2026–2027':poster.label+' — тижневий розклад уроків Квітневого ліцею, І семестр 2026–2027';
-  return '<section class="print-page poster-print-page'+(poster.kind==='bells'?' bells-print-page':poster.kind==='school-week'?' general-week-print-page':'')+'"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'" alt="'+escapeHtml(alt)+'"></div></section>';
+  return '<section class="print-page poster-print-page'+(poster.kind==='bells'?' bells-print-page':poster.kind==='school-week'?' general-week-print-page':'')+'"><div class="print-sheet poster-print-sheet"><img class="class-print-poster" src="'+escapeHtml(poster.imagePath)+'?v=20260913-schedule-1" alt="'+escapeHtml(alt)+'"></div></section>';
 }

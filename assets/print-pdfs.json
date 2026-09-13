@@ -19,7 +19,7 @@
       "id": "class-5-week",
       "type": "class",
       "path": "assets/print/class-5-week.pdf",
-      "sha256": "6a028f6b54fbb4e0f2a9519a15589625959c04b1ea11522de47528aefe2ac965",
+      "sha256": "5650bb37c22ceb37a8dca54e86ce464d107421eb10b5b886dd63125da0e63f9e",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -28,7 +28,7 @@
       "sources": [
         {
           "path": "assets/print/class-5-week.png",
-          "sha256": "a73bd625b709917de5ffcb06d6493354e8fda2274e8db9224bf59b10fbc0724e",
+          "sha256": "10d345cd835443ec4a88df02a3f262078fe3f58a713e1cedadb97a4e037dc3f2",
           "width": 1492,
           "height": 1054
         }
@@ -87,7 +87,7 @@
       "id": "class-7-week",
       "type": "class",
       "path": "assets/print/class-7-week.pdf",
-      "sha256": "f8744003acb7ec58b4a5bd644cbfbdc54378b509b92783362a47ed4046b44dea",
+      "sha256": "56c5c9c31b2e927ec66e6444096258302e0a2dd9ae5ed30310d9396bd044e5ca",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -96,7 +96,7 @@
       "sources": [
         {
           "path": "assets/print/class-7-week.png",
-          "sha256": "3dc12d9b425b7996f5da3bc6ebd711732ef96afc7fe813f42351f0dd5c892d03",
+          "sha256": "f82482545f947ffb0e71433351105fa182888c1ee2c3f5e0181cbf7c80a86af7",
           "width": 1492,
           "height": 1054
         }
@@ -155,7 +155,7 @@
       "id": "class-9-week",
       "type": "class",
       "path": "assets/print/class-9-week.pdf",
-      "sha256": "fa9422f1446423a97745ca470be35644edd3dbc091a185cae3a4671a5013239d",
+      "sha256": "dacbeca73fc12444ba434e8e440a91fbbca610e245edda88d5f7d6ce3580e566",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -164,7 +164,7 @@
       "sources": [
         {
           "path": "assets/print/class-9-week.png",
-          "sha256": "0261da56333fc0ab4dd0647a4523656c59d35c2456d4b9a69d7cb2cbdf887416",
+          "sha256": "787486b9ac52360d8f4e3ee69c474b85b8bbf872aefde92739f8b33b218e9820",
           "width": 1492,
           "height": 1054
         }
@@ -189,7 +189,7 @@
       "id": "class-10-week",
       "type": "class",
       "path": "assets/print/class-10-week.pdf",
-      "sha256": "95f82adbb9aeb2abd8cca8b070588f742f638414649c68e02bfbd4cc179d123e",
+      "sha256": "e32cc02f25d884d59fd74b2bad21f75a6684c396089862e0ddd860d9da461573",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -198,7 +198,7 @@
       "sources": [
         {
           "path": "assets/print/class-10-week.png",
-          "sha256": "64bf832f9835fb77379562c493914ccf3602d97cdd3ce376f2d761bc6688619f",
+          "sha256": "d0e07330bc20a2adb5ca0eceebc91cfbc421866b4fe6004e23c81658b629b5ca",
           "width": 1492,
           "height": 1054
         }
@@ -223,7 +223,7 @@
       "id": "class-11-week",
       "type": "class",
       "path": "assets/print/class-11-week.pdf",
-      "sha256": "7d920921560b5d94e8d3c0f5b036a8d7bcdb410c94f44817c8fc71571c2f9b4a",
+      "sha256": "a80ef52763fdf135db91e9d1b4f92884a9579df40c4d9843077356fade914041",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -232,7 +232,7 @@
       "sources": [
         {
           "path": "assets/print/class-11-week.png",
-          "sha256": "d580ce2f887365da1d0747f1e04dca875cb0645221145476402f6f2acd379b32",
+          "sha256": "7055b975c952ce21b1896e0ffa2d4c54c3ebca815b61d17be9febf14c90b9677",
           "width": 1491,
           "height": 1055
         }
@@ -257,7 +257,7 @@
       "id": "monday",
       "type": "day",
       "path": "assets/print-week/monday.pdf",
-      "sha256": "fe9c3c2ac68f5b93fa27d5621818d74608c3c03913a49003fe13abdd7eb9ac62",
+      "sha256": "3826f397320876df8d2303168bf393daf0f44822dc85447be7a198816934afd2",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -266,7 +266,7 @@
       "sources": [
         {
           "path": "assets/print-week/monday.png",
-          "sha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64",
+          "sha256": "51dadfb29495b55cecc6d440fcc894cb0d537846b79f87d838cd2ebbc886ae4c",
           "width": 1492,
           "height": 1054
         }
@@ -291,7 +291,7 @@
       "id": "tuesday",
       "type": "day",
       "path": "assets/print-week/tuesday.pdf",
-      "sha256": "1c5eb5b05bbbd69a4f22d69498479b1d775c6f914862eaa0360d3ffecb838d37",
+      "sha256": "593af5b0fcbd4d7aacd3a7e04641daca515e69b3a313f18f36de82e9aa815252",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -300,7 +300,7 @@
       "sources": [
         {
           "path": "assets/print-week/tuesday.png",
-          "sha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
+          "sha256": "78700fad926805b6e392733e7d379b974f4f15612f9873159b39679717dbd4ca",
           "width": 1492,
           "height": 1054
         }
@@ -325,7 +325,7 @@
       "id": "wednesday",
       "type": "day",
       "path": "assets/print-week/wednesday.pdf",
-      "sha256": "d6762955e567df9602a4a72a6b622be7dfbd3dcf2e426db23d9b80d464f5e3dc",
+      "sha256": "5f24c393069dbda03705bb85ad93201451196165828e31dc815e58837e47ec40",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -334,7 +334,7 @@
       "sources": [
         {
           "path": "assets/print-week/wednesday.png",
-          "sha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4",
+          "sha256": "2fb99b9bedbe3ed86c816d117a9da54f67480e92c3c5b90479828061f9731dc0",
           "width": 1491,
           "height": 1055
         }
@@ -359,7 +359,7 @@
       "id": "thursday",
       "type": "day",
       "path": "assets/print-week/thursday.pdf",
-      "sha256": "a95da89d91c369ede58c818dde9f0ea6691c62e2493fa8b3429ac688a1ce4722",
+      "sha256": "580fdbd12ff4fed36db57232d6c49cfb100365d3d52742a498bf32a993ae2397",
       "pageCount": 1,
       "pageSizePt": [
         841.8897637795277,
@@ -368,7 +368,7 @@
       "sources": [
         {
           "path": "assets/print-week/thursday.png",
-          "sha256": "222bc9753480a410ace66d9caa48d4cc79597377ef5df490ba5a9ad929985d63",
+          "sha256": "f75cea48f82795a8d0d25134e1cd4d11c636736e2c7eb46ec552b01a43ba1650",
           "width": 1491,
           "height": 1055
         }
@@ -427,7 +427,7 @@
       "id": "week-all-classes",
       "type": "week",
       "path": "assets/print-week/week-all-classes.pdf",
-      "sha256": "a58a248d42eb5c6b986ad8171ba083e6236ab4e6ac88cac69c4178b8864cfd51",
+      "sha256": "32c1063d05c2a61e0ab05151d27d378bde84f5529b5291b81918ca3f08d10f2f",
       "pageCount": 5,
       "pageSizePt": [
         841.8897637795277,
@@ -436,25 +436,25 @@
       "sources": [
         {
           "path": "assets/print-week/monday.png",
-          "sha256": "ac5aeb24658d402e63deff89a4919a5d24dd0d8ad0f34337a4d4479abf31bc64",
+          "sha256": "51dadfb29495b55cecc6d440fcc894cb0d537846b79f87d838cd2ebbc886ae4c",
           "width": 1492,
           "height": 1054
         },
         {
           "path": "assets/print-week/tuesday.png",
-          "sha256": "4eef50c1514b4efb9389477e97a5bda9870733e24a3bb7554095888f0e5d8c58",
+          "sha256": "78700fad926805b6e392733e7d379b974f4f15612f9873159b39679717dbd4ca",
           "width": 1492,
           "height": 1054
         },
         {
           "path": "assets/print-week/wednesday.png",
-          "sha256": "b1aa341cced88352fc2508584847bd703c44c342a14c847a94c0b2198ee665d4",
+          "sha256": "2fb99b9bedbe3ed86c816d117a9da54f67480e92c3c5b90479828061f9731dc0",
           "width": 1491,
           "height": 1055
         },
         {
           "path": "assets/print-week/thursday.png",
-          "sha256": "222bc9753480a410ace66d9caa48d4cc79597377ef5df490ba5a9ad929985d63",
+          "sha256": "f75cea48f82795a8d0d25134e1cd4d11c636736e2c7eb46ec552b01a43ba1650",
           "width": 1491,
           "height": 1055
         },

@@ -1,6 +1,6 @@
-import {posterForClass} from './print-posters.mjs?v=20260913-safe-print';
+import {posterForClass} from './print-posters.mjs?v=20260913-schedule-1';
 import {bellsPoster} from './bells-poster.mjs';
-import {weekPosterForDay,wholeWeekPdfPath} from './week-posters.mjs?v=20260913-safe-print';
+import {weekPosterForDay,wholeWeekPdfPath} from './week-posters.mjs?v=20260913-schedule-1';
 
 export function pdfForPrintRequest(config,{section='schedule',grade='all',view='week',day=0,printDay=null}={}){
   if(section==='bells')return bellsPoster.pdfPath;
@@ -13,7 +13,7 @@ export function openPrintPdf(path){
   // A same-origin download also works in embedded browsers without PDF popups.
   // Printing the file never adds the HTML page's URL/date/title; audio stays open.
   const link=document.createElement('a');
-  link.href=path+'?v=20260913-safe-print';
+  link.href=path+'?v=20260913-schedule-1';
   link.download=path.split('/').at(-1);
   document.body.append(link);
   link.click();
