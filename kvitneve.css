@@ -156,3 +156,28 @@
  #schedule-content .subject-icon,#schedule-content .week-matrix .subject-icon,#schedule-content .has-groups .subject-icon{width:28px;height:28px;}
  #schedule-content .subgroup{font-size:12px;}
 }
+
+/* Reveal the existing wallpaper between day tables; table surfaces stay intact. */
+@media screen{
+ #schedule.schedule-section{background:transparent;border-color:transparent;box-shadow:none;}
+ #schedule-content .week-block{background:transparent;}
+ #schedule-content .week-heading,#schedule-content .week-block.is-today .week-heading{background:transparent;box-shadow:none;}
+ #schedule>.section-heading>div:first-child,
+ #schedule-caption,
+ #schedule>.schedule-notes>summary,
+ #schedule>.schedule-notes>p,
+ #schedule>.table-note>span:not(:empty):not(.legend-dot){
+  background:#ffffffdf;color:#243c5b;border-radius:7px;box-shadow:0 0 0 5px #ffffffdf;
+ }
+ #schedule>.section-heading h2,#schedule>.section-heading .eyebrow{color:#243c5b;}
+ #schedule>.schedule-notes>summary{width:fit-content;max-width:100%;}
+ #schedule>.table-caption>.text-button,
+ #schedule-content .week-heading .week-actions .text-button,
+ #schedule-content .week-heading .week-actions select{
+  background:#ffffffdf;color:#254b74;border-radius:7px;
+ }
+ #schedule #schedule-content .weekday-title-button{
+  --weekday-face:linear-gradient(135deg,#ffffffed,#ffffffd6);
+  color:var(--day-ink);text-shadow:none;
+ }
+}
