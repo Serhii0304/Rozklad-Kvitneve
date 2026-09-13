@@ -1,0 +1,36 @@
+{
+  "url": "https://serhii0304.github.io/Rozklad-Kvitneve/",
+  "errorCorrection": "Q",
+  "quietZoneModules": 4,
+  "qrVersion": 4,
+  "pngPixels": [
+    1312,
+    1312
+  ],
+  "posterPixels": [
+    1440,
+    1792
+  ],
+  "decodedExactly": [
+    "full PNG",
+    "phone PNG",
+    "poster",
+    "rotated poster",
+    "SVG raster"
+  ],
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "assets/qr/site.png",
+      "sha256": "21d11c9d1eae468f71ab49a6448cea780efd42116a373cfe6cd76d8d193f9ec8"
+    },
+    {
+      "path": "assets/qr/site.svg",
+      "sha256": "340a77423f3a1bf5e8b2dd1a48b248706139d59788267abb360aaa1bfba1db4f"
+    },
+    {
+      "path": "assets/qr/poster.png",
+      "sha256": "b408f466e4a825bedbdb7f8ff57d934a75d6ed069b3764d25ce53570e65a507f"
+    }
+  ]
+}

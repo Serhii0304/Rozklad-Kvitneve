@@ -71,3 +71,7 @@ npm run build
 [bells-print.html](https://serhii0304.github.io/Rozklad-Kvitneve/bells-print.html) містить цілісне згенероване зображення із синьо-жовтим орнаментом. PDF і PNG — A4 у книжковій орієнтації, з полями щонайменше 5 мм. Кнопка друку дзвінків завантажує цей PDF. Джерело, запит і перевірка — у `assets/print-bells/`; текст і таблиця є частиною зображення ImageGen.
 
 Після прийняття нового зображення: `python scripts/build-bells-print.py`, `python scripts/build-bells-print.py --check`, `node scripts/validate-bells-print.mjs`, `npm run build`. Зміна дзвінків у конфігурації потребує нового зображення й перевірки його тексту.
+
+## QR-код для учнів і вчителів
+
+[qr.html](https://serhii0304.github.io/Rozklad-Kvitneve/qr.html) показує великий QR-код на весь доступний екран, має кнопку повноекранного перегляду та завантаження PNG, SVG і зображення з підписом. Посилання є в нижньому меню основних сторінок. QR веде на головну адресу сайту без фіксації дня або класу; PNG і SVG перевірені декодером. Файли — у `assets/qr/`, контрольні суми захищає `scripts/validate-qr.mjs`.
