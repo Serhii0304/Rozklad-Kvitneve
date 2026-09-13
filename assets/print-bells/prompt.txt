@@ -1,0 +1,26 @@
+Use case: infographic-diagram.
+Create a final, exceptionally beautiful, professionally designed Ukrainian school bell timetable PRINT POSTER. A4 PORTRAIT aspect ratio 210:297, target high resolution around 2400×3394. This is ONE FULLY GENERATED FLAT ARTWORK IMAGE containing ALL final typography, grid, decorations, and illustrations, ready for printing. Do not show a mockup, room, screen, perspective, or page shadow.
+Visual direction: elegant editorial school stationery, bright warm ivory paper, rich navy typography, Ukrainian royal blue and sun yellow accents. A refined narrow ornamental border inspired by Ukrainian geometric embroidery; tiny tasteful bell and clock illustrations at the top corners, no oversized objects. Polished, balanced, graceful, welcoming. Large precise highly legible Ukrainian type, crisp printed finish, no distressed texture. Centered title. Use most of the page for the table: it should extend almost edge to edge inside the narrow border with small page-edge safety padding (external printer margins will be added later). Header about 18 percent of height, table about 71 percent, footer about 7 percent. Minimal wasted space. Keep decoration subordinate to the readable timetable. Navy/ivory lesson rows alternating with pale blue / soft yellow break rows. Lesson labels and times are large; break labels, times and durations slightly smaller but still clearly legible. Two aligned columns: label on left, time range on right, break duration after a middle dot. No extra column headings.
+Place exactly this centered header, on three lines:
+"КВІТНЕВИЙ ЛІЦЕЙ"
+"РОЗКЛАД ДЗВІНКІВ"
+"І семестр · 2026–2027 навчальний рік"
+Main table MUST contain exactly 13 rows in this EXACT order and exact text:
+"1-й урок" | "08:50–09:35"
+"Перерва" | "09:35–09:50 · 15 хв"
+"2-й урок" | "09:50–10:35"
+"Перерва" | "10:35–10:50 · 15 хв"
+"3-й урок" | "10:50–11:35"
+"Велика перерва" | "11:35–11:55 · 20 хв"
+"4-й урок" | "11:55–12:40"
+"Перерва" | "12:40–12:50 · 10 хв"
+"5-й урок" | "12:50–13:35"
+"Перерва" | "13:35–13:45 · 10 хв"
+"6-й урок" | "13:45–14:30"
+"Перерва" | "14:30–14:40 · 10 хв"
+"7-й урок" | "14:40–15:25"
+CRITICAL NUMBERING: Only the SEVEN lesson rows are numbered, exactly 1-й урок through 7-й урок. The SIX break rows must NEVER have any number or numbered badge; their left labels contain only Перерва or Велика перерва. Never treat row index as lesson number. No invented row numbers.
+At bottom, modestly sized exact text in two centered lines:
+"09:00–09:01 · Хвилина мовчання"
+"Київський час"
+Every label and every time range must be reproduced verbatim in Ukrainian. The first letter in "І семестр" is Ukrainian capital І. Preserve all 13 rows and correct time ranges. No other text, no captions, no logos, no URL, no date stamp, no fake UI buttons. No landscape. No thick blank margins. Produce one complete polished poster, with exact typographic text and table inside the generated raster image.

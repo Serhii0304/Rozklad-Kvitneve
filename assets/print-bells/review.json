@@ -1,0 +1,51 @@
+{
+  "accepted": true,
+  "sourceGeneratedPath": "exec-2a044a72-78fd-43d7-9764-ffcbe8eb98a6.png",
+  "sourceGeneratedBasename": "exec-2a044a72-78fd-43d7-9764-ffcbe8eb98a6.png",
+  "sha256": "f93fc20249ad67e4ca6511fb133939e396e4c7133bee37f63c14319306f418df",
+  "width": 1055,
+  "height": 1491,
+  "pixelFormat": "Format24bppRgb",
+  "cellsChecked": 13,
+  "textChecked": true,
+  "review": "Visually checked all 13 table rows, all header/footer text and times. Only seven lesson rows are numbered. Six breaks are unnumbered. Original PNG copied byte-for-byte; no overlay, redraw, crop, or retouch.",
+  "generatedBy": "built-in image_gen",
+  "bellSchedule": [
+    {
+      "lesson": 1,
+      "start": "08:50",
+      "end": "09:35"
+    },
+    {
+      "lesson": 2,
+      "start": "09:50",
+      "end": "10:35"
+    },
+    {
+      "lesson": 3,
+      "start": "10:50",
+      "end": "11:35"
+    },
+    {
+      "lesson": 4,
+      "start": "11:55",
+      "end": "12:40"
+    },
+    {
+      "lesson": 5,
+      "start": "12:50",
+      "end": "13:35"
+    },
+    {
+      "lesson": 6,
+      "start": "13:45",
+      "end": "14:30"
+    },
+    {
+      "lesson": 7,
+      "start": "14:40",
+      "end": "15:25"
+    }
+  ],
+  "promptSha256": "c9a8afcb2c04cfa59890cf7c1fb26ae2c3812af557fe557fd7336c2cd96e3d37"
+}

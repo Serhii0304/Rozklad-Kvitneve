@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "pageSizeMm": [
+    210,
+    297
+  ],
+  "safetyMarginMm": 5,
+  "originalUnmodified": true,
+  "source": {
+    "path": "assets/print-bells/bells-original.png",
+    "sha256": "f93fc20249ad67e4ca6511fb133939e396e4c7133bee37f63c14319306f418df",
+    "width": 1055,
+    "height": 1491
+  },
+  "pdf": {
+    "path": "assets/print-bells/bells-a4.pdf",
+    "sha256": "139ce26bc97b777cd32a61523bf875a53c28bf465c46b709bb3dcf32ddbd3936",
+    "pageCount": 1
+  },
+  "image": {
+    "path": "assets/print-bells/bells-a4.png",
+    "sha256": "fd8cbe9d5d7d7da83519248ed99d9da9a8a7f5a48b9030ac22901e535fa80ca1",
+    "width": 2481,
+    "height": 3508,
+    "dpi": 300
+  },
+  "preview": {
+    "path": "assets/print-bells/bells-preview.webp",
+    "sha256": "dfcd5698f5f1f98866f8bf1e9c27d128d5e9710edc5bd7ac186db85f6596c0d8",
+    "width": 1400,
+    "height": 1980
+  },
+  "placementPt": {
+    "x": 14.41322834645672,
+    "y": 20.672057916931067,
+    "width": 566.4491338582677,
+    "height": 800.5456479456656
+  },
+  "validation": {
+    "singleImage": true,
+    "pixelsUnchanged": true,
+    "noText": true,
+    "uncropped": true,
+    "safeMargins": true
+  }
+}

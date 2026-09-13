@@ -1,17 +1,19 @@
+import {bellsMarkup,updateBellHighlights} from './bells-view.mjs?v=20260913-compact-bells';
+import {bellsPoster} from './bells-poster.mjs';
 import {subjectCellMarkup,subjectsInLesson} from './lesson-content.mjs';
 import {enhanceTableNavigation} from './table-navigation.mjs';
-import {posterForClass} from './print-posters.mjs?v=20260913-safe-print';
+import {posterForClass} from './print-posters.mjs?v=20260913-bells-poster';
 import {weekPosterForDay,wholeWeekPosters} from './week-posters.mjs?v=20260913-safe-print';
-import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs?v=20260913-safe-print';
+import {pdfForPrintRequest,openPrintPdf} from './print-files.mjs?v=20260913-bells-poster';
 import {readViewState,selectViewMode} from './view-mode.mjs';
 import {displaySchoolState} from './live-state.mjs';
 import {classIndex,classGrade,classRangeLabel} from './time-core.mjs';
-import {printPagesMarkup,fitPrintPages,settlePrintAssets} from './print-layout.mjs';
+import {printPagesMarkup,fitPrintPages,settlePrintAssets} from './print-layout.mjs?v=20260913-bells-poster';
 import {subjectIconMarkup} from './subject-icons.mjs';
 import {classWeekMarkup} from './schedule-view.mjs';
 import './effects.mjs';
 import {KyivClock} from './kyiv-clock.mjs';
-import {kyivParts,silenceWindow,schoolState,durationLabel,hhmmSeconds} from './time-core.mjs';
+import {kyivParts,silenceWindow,schoolState,durationLabel} from './time-core.mjs';
 import {SilencePlayer} from './minute-of-silence.mjs';
 import {SchoolBellPlayer} from './school-bell.mjs';
 const C=window.SchoolScheduleConfig,D=C.dayOrder,B=C.bellSchedule;
@@ -53,7 +55,7 @@ function navigatePage(nextGrade='all',nextSection='schedule'){grade=nextGrade;se
 function syncUrl(){const query=new URLSearchParams();if(grade!=='all')query.set('class',grade+' клас');query.set('view',view);if(!autoDay)query.set('day',D[day].id);const str=query.toString();history.replaceState(null,'',location.pathname+(str?'?'+str:'')+'#'+section);document.title=(section==='bells'?'Дзвінки':grade==='all'?'Розклад 5–11 класів':grade+' клас — розклад')+' · Квітневе 2026–2027';}
 function renderSection(){section=location.hash==='#bells'||decodeURIComponent(location.pathname).endsWith('Розклад дзвінків.html')?'bells':'schedule';applyPageLayout();$('#schedule').hidden=section!=='schedule';$('#bells').hidden=section!=='bells';$$('[data-nav]').forEach(a=>{if(a.dataset.nav===section)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});syncUrl();}
 function applyFilters(){let count=0;$$('#schedule-content [data-subject]').forEach(btn=>{const row=btn.closest('[data-row-day]');const local=grade==='all'?(dayFilters[row?.dataset.rowDay]||''):'';const target=subject||local;const match=btn.dataset.subject===target;btn.classList.toggle('is-match',Boolean(target)&&match);btn.classList.remove('is-dim');btn.setAttribute('aria-pressed',String(Boolean(target)&&match));if(target&&match)count++;});$('#filter-result').textContent=subject||Object.values(dayFilters).some(Boolean)?'Знайдено уроків: '+count:'';}
-function renderBells(){ $('#bells-content').innerHTML=B.map((b,i)=>'<div class="bell-row" data-bell="'+b.lesson+'"><span class="bell-number">'+b.lesson+'</span><span class="bell-name">'+b.lesson+'-й урок<small></small></span><span class="bell-hours">'+b.start+' <span aria-hidden="true">—</span> '+b.end+'</span></div>'+(i<B.length-1?'<div class="bell-break '+((hhmmSeconds(B[i+1].start)-hhmmSeconds(b.end))/60>=20?'large':'')+'" data-break="'+b.lesson+'"><span>'+((hhmmSeconds(B[i+1].start)-hhmmSeconds(b.end))/60>=20?'Велика перерва':'Перерва')+'</span><span>'+((hhmmSeconds(B[i+1].start)-hhmmSeconds(b.end))/60)+' хв</span></div>':'')).join('');}
+function renderBells(){ $('#bells-content').innerHTML=bellsMarkup(C);}
 function text(selector,value){const node=$(selector);if(node&&node.textContent!==value)node.textContent=value;}
 function updateLive(force=false){const now=clock.now(),p=kyivParts(now),key=Math.floor(now/1000);if(!force&&key===lastSecond)return;lastSecond=key;
 const time=timeFormatter.format(now);$('#clock').innerHTML=time.slice(0,5)+'<span>'+time.slice(5)+'</span>';$('#clock').dateTime=new Date(now).toISOString();text('#date',dateFormatter.format(now));text('#sync-status',clock.source);
@@ -63,13 +65,14 @@ text('#live-kind',state.kind==='lesson'?'ЗАРАЗ У ШКОЛІ':state.kind===
 $('#silence').classList.toggle('is-active',w.active);document.body.classList.toggle('is-silence-active',w.active);$('#silence-countdown').hidden=!w.active;text('#silence-countdown',durationLabel(w.remaining));text('#silence-title',w.active?'Пам’ятаємо. Вшановуємо.':'Хвилина мовчання');text('#silence-detail',w.active?'09:00–09:01 · Київський час':'Щодня о 09:00–09:01. Вшановуємо пам’ять загиблих.');
 const liveKey=[p.dateKey,state.kind,state.lesson,state.nextLesson,grade,view,day,section].join('|');if(force||liveKey!==lastLive){lastLive=liveKey;$$('#schedule-content [data-row-day]').forEach(row=>{const current=Number(row.dataset.rowDay)===state.dayIndex&&Number(row.dataset.lesson)===state.lesson;const upcoming=Number(row.dataset.rowDay)===state.dayIndex&&Number(row.dataset.lesson)===state.nextLesson;row.classList.toggle('is-current',current);row.classList.toggle('is-upcoming',upcoming);row.querySelector('.row-state').textContent=current?'ЗАРАЗ':upcoming?'НАСТУПНИЙ':'';if(current)row.setAttribute('aria-current','time');else row.removeAttribute('aria-current');});
 $$('#schedule-content [data-week-row]').forEach(row=>{const current=state.kind==='lesson'&& +row.dataset.weekRow===state.lesson;const next=(state.kind==='break'||state.kind==='before')&& +row.dataset.weekRow===state.nextLesson;row.classList.toggle('is-current',current);row.classList.toggle('is-upcoming',next);row.querySelector('.row-state').textContent=current?'ЗАРАЗ':next?'НАСТУПНИЙ':'';if(current)row.setAttribute('aria-current','time');else row.removeAttribute('aria-current');row.querySelectorAll('[data-cell-day]').forEach(cell=>{const live=current&& +cell.dataset.cellDay===state.dayIndex;cell.classList.toggle('is-current-cell',live);if(live)cell.setAttribute('aria-current','time');else cell.removeAttribute('aria-current');});});
-const globalState=schoolState(now,C);$$('[data-bell]').forEach(row=>{const active=+row.dataset.bell===globalState.lesson;row.classList.toggle('is-current',active);row.querySelector('small').textContent=active?'Триває зараз':'';});$$('[data-break]').forEach(row=>{row.classList.toggle('is-current',globalState.kind==='break'&& +row.dataset.break===globalState.nextLesson-1);const index=B.findIndex(b=>b.lesson===+row.dataset.break);row.querySelector('span:last-child').textContent=((hhmmSeconds(B[index+1].start)-hhmmSeconds(B[index].end))/60)+' хв';});}
+}
 $$('#schedule-content .is-current .row-state').forEach(node=>{node.textContent='ЗАРАЗ · '+durationLabel(state.remaining);});
 $$('#schedule-content .is-upcoming .row-state').forEach(node=>{node.textContent=(state.kind==='break'?'ПЕРЕРВА · ':'ПОЧАТОК · ')+durationLabel(state.remaining);});
-if(section==='bells'){$$('[data-bell].is-current small').forEach(node=>node.textContent='До кінця: '+durationLabel(state.remaining));$$('[data-break].is-current span:last-child').forEach(node=>node.textContent='Залишилося '+durationLabel(state.remaining));}}
+if(section==='bells'||force)updateBellHighlights($('#bells-content'),schoolState(now,C));}
+
 function printView(printDay=null){
  const stage=$('#print-stage'),pages=[];
- if(section==='bells'&&printDay===null)pages.push({title:'Розклад дзвінків · 5–11 класи',bells:true,content:$('#bells-content').outerHTML});
+ if(section==='bells'&&printDay===null)pages.push({title:'Розклад дзвінків · 5–11 класи',poster:bellsPoster});
  else if(printDay!==null)pages.push({title:D[printDay].label+' · 5–11 класи',poster:weekPosterForDay(C,printDay)});
  else if(view==='week'&&grade!=='all')pages.push({title:grade+' клас · Навчальний тиждень',poster:posterForClass(C,grade)});
  else if(view==='week')wholeWeekPosters(C).forEach(poster=>pages.push({title:poster.label+' · 5–11 класи',poster}));

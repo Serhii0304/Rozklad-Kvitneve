@@ -16,8 +16,8 @@ test('The homepage week and individual days resolve to the correct PDF pages',()
   assert.equal(pdfForPrintRequest(C,{printDay:index}),`assets/print-week/${day.id}.pdf`);
  });
 });
-test('Bell and single-class day tables keep their ordinary print route',()=>{
- assert.equal(pdfForPrintRequest(C,{section:'bells'}),null);
+test('Bells use their illustrated portrait PDF while single-class day tables keep ordinary printing',()=>{
+ assert.equal(pdfForPrintRequest(C,{section:'bells'}),'assets/print-bells/bells-a4.pdf');
  assert.equal(pdfForPrintRequest(C,{grade:'6',view:'day'}),null);
 });
 
