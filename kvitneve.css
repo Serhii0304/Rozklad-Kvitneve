@@ -171,7 +171,8 @@
 /* Reveal the existing wallpaper between day tables; table surfaces stay intact. */
 @media screen{
  #schedule.schedule-section{background:transparent;border-color:transparent;box-shadow:none;}
- #schedule-content .week-block{background:transparent;}
+ #schedule-content .week-block{background:transparent;border-color:transparent;box-shadow:none;overflow:visible;}
+ #schedule-content .week-block .table-wrap{border-radius:0 0 12px 12px;box-shadow:-2px 0 var(--kv-row-edge),2px 0 var(--kv-row-edge),0 2px var(--kv-row-edge);}
  #schedule-content .week-heading,#schedule-content .week-block.is-today .week-heading{background:transparent;box-shadow:none;}
  #schedule>.section-heading>div:first-child,
  #schedule-caption,
